@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 1. 인공지능 기초 이론 및 용어 정리 | AI 프롬프트활용능력 2급</title>
+    <meta name="description" content="AI 프롬프트활용능력 2급 Chapter 1 인공지능의 역사, 알고리즘, 정밀도, 재현율, F1 스코어 등 핵심 용어 및 기출 예상 문제 완벽 정리">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Pretendard:wght@400;500;600;700&display=swap'); body { font-family: 'Pretendard', sans-serif; }</style>
+</head>
+<!-- 상단 네비게이션 바 -->
+ <body class="bg-[#FAF8F5] text-[#2D2A26] min-h-screen flex flex-col antialiased selection:bg-orange-200 selection:text-orange-900"></body>
+<header class="bg-white/80 backdrop-blur-md border-b border-[#EFECE6] sticky top-0 z-50 shadow-sm">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+        <a href="index.html" class="flex items-center space-x-2.5">
+            <span class="bg-orange-500 text-white text-xs font-bold px-2.5 py-1 rounded-md shadow-sm">KPC AI-POT</span>
+            <span class="font-bold text-[#2D2A26] text-lg tracking-tight">AI 프롬프트활용능력 2급</span>
+        </a>
+        <nav class="hidden md:flex space-x-6 text-sm font-medium text-[#6B655D]">
+                <a href="index.html" class="hover:text-orange-600 transition">홈</a>
+                    <a href="exam-info.html" class="hover:text-orange-600 transition">시험개요</a>
+            
+                <a href="ch5.html" class="text-orange-600 font-bold">ch05. 프롬프트 엔지니어링 업무 활용과 윤리 원칙 핵심요약 & 기출 20제</a>
+                <a href="ch1_cbt.html" class="hover:text-orange-600 transition">CBT 모의고사</a>
+            </nav>
+    </div>
+</header>
+<!-- 메인 컨텐츠 영역 -->
+<main class="max-w-4xl mx-auto px-6 py-12 flex-1 space-y-12">
+    
+    <!-- 타이틀 섹션 -->
+    <section class="bg-white border border-[#EFECE6] rounded-3xl p-8 md:p-12 shadow-sm space-y-4">
+        <span class="inline-block bg-orange-50 text-orange-600 text-xs font-bold px-3 py-1 rounded-full border border-orange-100">Chapter 05 용어 사전</span>
+        <h1 class="text-3xl font-extrabold text-[#2D2A26] tracking-tight">프롬프트 엔지니어링 업무 활용과 윤리 원칙 전체 용어 정리</h1>
+        <p class="text-[#6B655D] leading-relaxed text-base">
+            한국생산성본부(KPC) 공식 출제 기준에 맞춘 Chapter 5의 모든 핵심 용어와 개념(저작권 문제 해결, 환각 현상, 편향성 및 윤리 원칙)을 총망라하여 정리했습니다.
+        </p>
+    </section>
+
+    <!-- 파트 1. 환각 현상 및 알고리즘 편향성 -->
+    <section class="bg-white border border-[#EFECE6] rounded-3xl p-8 shadow-sm space-y-6">
+        <div class="border-b border-[#EFECE6] pb-4">
+            <span class="text-xs font-bold text-orange-600 uppercase tracking-wider">Part 01</span>
+            <h2 class="text-xl font-bold text-[#2D2A26] mt-1">환각 현상 및 알고리즘 편향성</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
+            <div class="p-5 rounded-2xl bg-[#FAF8F5] border border-[#EFECE6] space-y-2">
+                <h3 class="font-bold text-[#2D2A26] text-base">환각 현상 (Hallucination)</h3>
+                <p class="text-[#6B655D] leading-relaxed text-xs">LLM의 고질적인 한계로, AI가 사실이 아닌 정보나 존재하지 않는 판례·문헌을 마치 진실인 것처럼 확신에 찬 어조로 그럴듯하게 거짓 생성해내는 오류 현상입니다.</p>
+            </div>
+            <div class="p-5 rounded-2xl bg-[#FAF8F5] border border-[#EFECE6] space-y-2">
+                <h3 class="font-bold text-[#2D2A26] text-base">알고리즘 편향성 (Algorithmic Bias)</h3>
+                <p class="text-[#6B655D] leading-relaxed text-xs">AI가 학습한 방대한 빅데이터 내에 내재된 고정관념, 성별·인종·국적 등에 관한 편견이 반영되어 왜곡되거나 차별적인 결과물을 출력하는 현상입니다.</p>
+            </div>
+            <div class="p-5 rounded-2xl bg-[#FAF8F5] border border-[#EFECE6] space-y-2">
+                <h3 class="font-bold text-[#2D2A26] text-base">교차 검증 (Cross-Verification)</h3>
+                <p class="text-[#6B655D] leading-relaxed text-xs">환각 현상이나 오류를 바로잡기 위해 AI의 답변을 신뢰하기 전 공식 문서, 신뢰할 수 있는 데이터베이스 등 외부 원천 자료와 대조하여 사실 여부를 확인하는 실무 검증 절차입니다.</p>
+            </div>
+            <div class="p-5 rounded-2xl bg-[#FAF8F5] border border-[#EFECE6] space-y-2">
+                <h3 class="font-bold text-[#2D2A26] text-base">문화적 편향 (Cultural Bias)</h3>
+                <p class="text-[#6B655D] leading-relaxed text-xs">특정 언어나 서구권 데이터 편중으로 인해 비영어권 문화나 가치관이 소외되거나 왜곡되어 출력되는 현상입니다.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 파트 2. 저작권 문제 해결 방안 및 지식재산권 -->
+    <section class="bg-white border border-[#EFECE6] rounded-3xl p-8 shadow-sm space-y-6">
+        <div class="border-b border-[#EFECE6] pb-4">
+            <span class="text-xs font-bold text-orange-600 uppercase tracking-wider">Part 02</span>
+            <h2 class="text-xl font-bold text-[#2D2A26] mt-1">저작권 문제 해결 방안 및 지식재산권</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
+            <div class="p-5 rounded-2xl bg-[#FAF8F5] border border-[#EFECE6] space-y-2">
+                <h3 class="font-bold text-[#2D2A26] text-base">저작권 침해 및 무단 수집 (Copyright & Data Scraping)</h3>
+                <p class="text-[#6B655D] leading-relaxed text-xs">인터넷상의 기존 텍스트, 이미지, 소스 코드 등의 데이터를 무단으로 수집·학습하는 과정과, AI 산출물에 대한 권리 귀속을 둘러싼 법적 쟁점입니다.</p>
+            </div>
+            <div class="p-5 rounded-2xl bg-[#FAF8F5] border border-[#EFECE6] space-y-2">
+                <h3 class="font-bold text-[#2D2A26] text-base">디지털 워터마킹 (Digital Watermarking)</h3>
+                <p class="text-[#6B655D] leading-relaxed text-xs">AI가 생성한 이미지나 문서 콘텐츠임을 사용자가 명확히 인식할 수 있도록 가시적·비가시적 식별 마크를 포함시켜 투명성을 확보하는 방안입니다.</p>
+            </div>
+            <div class="p-5 rounded-2xl bg-[#FAF8F5] border border-[#EFECE6] space-y-2">
+                <h3 class="font-bold text-[#2D2A26] text-base">지식재산권 존중 및 자율 준수</h3>
+                <p class="text-[#6B655D] leading-relaxed text-xs">타인의 정당한 저작물과 화풍을 무단 모방하거나 복제하는 지시문을 프롬프트에 포함하지 않도록 준수하는 윤리적 태도입니다.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 파트 3. 프롬프트 엔지니어를 위한 윤리 원칙 및 보안 -->
+    <section class="bg-white border border-[#EFECE6] rounded-3xl p-8 shadow-sm space-y-6">
+        <div class="border-b border-[#EFECE6] pb-4">
+            <span class="text-xs font-bold text-orange-600 uppercase tracking-wider">Part 03</span>
+            <h2 class="text-xl font-bold text-[#2D2A26] mt-1">프롬프트 엔지니어를 위한 윤리 원칙 및 보안</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
+            <div class="p-5 rounded-2xl bg-[#FAF8F5] border border-[#EFECE6] space-y-2">
+                <h3 class="font-bold text-[#2D2A26] text-base">Human-in-the-loop (HITL, 인간 참여형 검수)</h3>
+                <p class="text-[#6B655D] leading-relaxed text-xs">AI가 도출한 최종 판단이나 생성 결과물을 맹신하지 않고, 교정 및 검수 과정에 인간이 직접 개입하여 오류나 리스크를 통제하는 방식입니다.</p>
+            </div>
+            <div class="p-5 rounded-2xl bg-[#FAF8F5] border border-[#EFECE6] space-y-2">
+                <h3 class="font-bold text-[#2D2A26] text-base">민감 정보 및 개인 식별 정보 (PII) 보호</h3>
+                <p class="text-[#6B655D] leading-relaxed text-xs">주민등록번호, 연락처, 금융 정보 등 프라이버시 침해 및 보안 유출 사고를 일으킬 수 있는 엄격한 보호 대상 정보입니다.</p>
+            </div>
+            <div class="p-5 rounded-2xl bg-[#FAF8F5] border border-[#EFECE6] space-y-2">
+                <h3 class="font-bold text-[#2D2A26] text-base">영업 기밀 및 내부 소스 코드 보호</h3>
+                <p class="text-[#6B655D] leading-relaxed text-xs">기업 내부의 미공개 비즈니스 전략, 소스 코드 등이 공용 프롬프트 시스템에 입력되어 외부로 유출되지 않도록 통제하는 보안 원칙입니다.</p>
+            </div>
+            <div class="p-5 rounded-2xl bg-[#FAF8F5] border border-[#EFECE6] space-y-2">
+                <h3 class="font-bold text-[#2D2A26] text-base">딥페이크 악용 방지 (Deepfake Prevention)</h3>
+                <p class="text-[#6B655D] leading-relaxed text-xs">인공지능 합성 기술을 활용해 타인의 얼굴이나 음성을 정교하게 조작하여 명예 훼손, 허위사실 유포 등에 악용하는 역기능을 차단하는 윤리적 방안입니다.</p>
+            </div>
+            <div class="p-5 rounded-2xl bg-[#FAF8F5] border border-[#EFECE6] space-y-2">
+                <h3 class="font-bold text-[#2D2A26] text-base">책임성 원칙 (Accountability)</h3>
+                <p class="text-[#6B655D] leading-relaxed text-xs">AI 기술이 가져오는 리스크 속에서, 최종 산출물과 활용에 대한 모든 법적·윤리적 책임은 AI 모델 자체가 아니라 이를 사용한 인간에게 있다는 원칙입니다.</p>
+            </div>
+            <div class="p-5 rounded-2xl bg-[#FAF8F5] border border-[#EFECE6] space-y-2">
+                <h3 class="font-bold text-[#2D2A26] text-base">AI 윤리 가이드라인 및 거버넌스</h3>
+                <p class="text-[#6B655D] leading-relaxed text-xs">조직 내에서 AI 기술을 다룰 때 악의적 프롬프트 사용을 방지하고 투명성과 유해성 차단을 실천하기 위해 수립하는 준칙입니다.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 하단 네비게이션 버튼 -->
+    <div class="flex justify-between items-center pt-6">
+        <a href="ch4_summary.html" class="bg-white hover:bg-[#F4F1EA] border border-[#EFECE6] text-[#2D2A26] px-5 py-2.5 rounded-xl text-sm font-medium transition shadow-sm">← Ch 4. 기술활용</a>
+        <a href="index.html" class="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2.5 rounded-xl text-sm font-semibold transition shadow-sm">메인 홈으로 이동 →</a>
+    </div>
+</main>
+<!-- 푸터 -->
+     <footer class="bg-white border-t border-[#EFECE6] py-8 text-center text-xs text-[#8C857B] space-y-3 shrink-0 mt-12">
+        <div class="flex justify-center space-x-6 font-medium">
+            <a href="index.html" class="hover:text-[#2D2A26]">홈</a>
+            <a href="exam-info.html" class="hover:text-[#2D2A26]">시험개요</a>
+            <a href="privacy.html" class="hover:text-[#2D2A26]">개인정보처리방침</a>
+            <a href="terms.html" class="hover:text-[#2D2A26]">이용약관</a>
+        </div>
+        <p>© 2026 AI-POT Study Portal. All rights reserved.</p>
+    </footer>
+</body>
+</html>

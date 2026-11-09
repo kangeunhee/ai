@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 1. 인공지능 기초 이론 및 용어 정리 | AI 프롬프트활용능력 2급</title>
+    <meta name="description" content="AI 프롬프트활용능력 2급 Chapter 1 인공지능의 역사, 알고리즘, 정밀도, 재현율, F1 스코어 등 핵심 용어 및 기출 예상 문제 완벽 정리">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Pretendard:wght@400;500;600;700&display=swap'); body { font-family: 'Pretendard', sans-serif; }</style>
+</head>
+<body class="bg-[#FAF8F5] text-[#2D2A26] min-h-screen flex flex-col antialiased selection:bg-orange-200 selection:text-orange-900">
+
+    <!-- 상단 네비게이션 바 -->
+    <header class="bg-white/80 backdrop-blur-md border-b border-[#EFECE6] sticky top-0 z-50 shadow-sm">
+        <div class="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="index.html" class="flex items-center space-x-2.5">
+                <span class="bg-orange-500 text-white text-xs font-bold px-2.5 py-1 rounded-md shadow-sm">KPC AI-POT</span>
+                <span class="font-bold text-[#2D2A26] text-lg tracking-tight">AI 프롬프트활용능력 2급</span>
+            </a>
+            <nav class="hidden md:flex space-x-6 text-sm font-medium text-[#6B655D]">
+                <a href="index.html" class="hover:text-orange-600 transition">홈</a>
+                <a href="exam-info.html" class="hover:text-orange-600 transition">시험개요</a>
+             
+                <a href="ch1.html" class="text-orange-600 font-bold">Ch 1.인공지능 기초 이론 핵심 요약 & 기출 20제</a>
+                <a href="ch1_cbt.html" class="hover:text-orange-600 transition">CBT 모의고사</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 메인 컨텐츠 영역 -->
+    <main class="max-w-4xl mx-auto px-6 py-12 flex-1 space-y-12">
+        
+        <!-- 타이틀 섹션 -->
+        <section class="bg-white border border-[#EFECE6] rounded-3xl p-8 md:p-12 shadow-sm space-y-4">
+            <span class="inline-block bg-orange-50 text-orange-600 text-xs font-bold px-3 py-1 rounded-full border border-orange-100">Chapter 01</span>
+            <h1 class="text-3xl font-extrabold text-[#2D2A26] tracking-tight">인공지능 기초 이론 및 핵심 용어 총정리</h1>
+            <p class="text-[#6B655D] leading-relaxed text-base">
+                인공지능의 역사적 변천 과정부터 주요 머신러닝·딥러닝 알고리즘, 그리고 혼동 행렬 기반의 성능 평가 지표(정밀도, 재현율, F1 스코어 등)까지 시험에 출제되는 모든 개념을 상세히 정리했습니다.
+            </p>
+        </section>
+
+        <!-- 파트 1. 인공지능의 역사와 핵심 알고리즘 용어 -->
+        <section class="bg-white border border-[#EFECE6] rounded-3xl p-8 shadow-sm space-y-6">
+            <div class="border-b border-[#EFECE6] pb-4">
+                <span class="text-xs font-bold text-orange-600 uppercase tracking-wider">Part 01</span>
+                <h2 class="text-xl font-bold text-[#2D2A26] mt-1">인공지능의 역사와 핵심 알고리즘 용어</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
+                <div class="p-5 rounded-2xl bg-[#FAF8F5] border border-[#EFECE6] space-y-2">
+                    <h3 class="font-bold text-[#2D2A26] text-base">인공지능 (AI, Artificial Intelligence)</h3>
+                    <p class="text-[#6B655D] leading-relaxed text-xs">인간의 학습 능력, 추론 능력, 지각 능력 등을 컴퓨터 프로그램으로 구현하여 지능적인 작업을 수행할 수 있도록 만든 기술 및 연구 분야입니다. 1956년 다트머스 회의에서 처음 공식 용어로 채택되었습니다.</p>
+                </div>
+                <div class="p-5 rounded-2xl bg-[#FAF8F5] border border-[#EFECE6] space-y-2">
+                    <h3 class="font-bold text-[#2D2A26] text-base">다트머스 회의 (Dartmouth Workshop, 1956)</h3>
+                    <p class="text-[#6B655D] leading-relaxed text-xs">존 매카시, 마빈 민스키, 클로드 샤논 등의 학자들이 모여 현대 인공지능 연구의 출발점이 된 역사적인 학술회의로, '인공지능'이라는 용어가 공식적으로 탄생한 계기가 되었습니다.</p>
+                </div>
+                <div class="p-5 rounded-2xl bg-[#FAF8F5] border border-[#EFECE6] space-y-2">
+                    <h3 class="font-bold text-[#2D2A26] text-base">AI 윈터 (AI Winter, 인공지능의 겨울)</h3>
+                    <p class="text-[#6B655D] leading-relaxed text-xs">초기 인공지능 연구에 대한 과도한 기대와 달리 컴퓨터의 연산 능력 한계, 데이터 부족 등으로 인해 가시적인 성과를 내지 못하면서 정부 지원과 연구 투자가 급감했던 침체기를 뜻합니다.</p>
+                </div>
+                <div class="p-5 rounded-2xl bg-[#FAF8F5] border border-[#EFECE6] space-y-2">
+                    <h3 class="font-bold text-[#2D2A26] text-base">머신러닝 (Machine Learning, 기계학습)</h3>
+                    <p class="text-[#6B655D] leading-relaxed text-xs">컴퓨터가 명시적인 규칙을 일일이 코딩하지 않고, 대규모 데이터를 통해 스스로 패턴을 학습하여 예측이나 분류 등의 작업을 수행하는 인공지능의 하위 영역입니다.</p>
+                </div>
+                <div class="p-5 rounded-2xl bg-[#FAF8F5] border border-[#EFECE6] space-y-2">
+                    <h3 class="font-bold text-[#2D2A26] text-base">지도 학습 (Supervised Learning)</h3>
+                    <p class="text-[#6B655D] leading-relaxed text-xs">입력 데이터(Features)와 그에 대응하는 정답(Label, Target)을 함께 제공하여 모델이 데이터와 정답 간의 관계를 학습하도록 유도하는 머신러닝 방식입니다.</p>
+                </div>
+                <div class="p-5 rounded-2xl bg-[#FAF8F5] border border-[#EFECE6] space-y-2">
+                    <h3 class="font-bold text-[#2D2A26] text-base">비지도 학습 (Unsupervised Learning)</h3>
+                    <p class="text-[#6B655D] leading-relaxed text-xs">정답(Label)이 주어지지 않은 순수 데이터만을 활용하여, 모델이 데이터 스스로의 내재된 구조, 군집(Cluster), 패턴 등을 찾아내도록 하는 학습 방식입니다.</p>
+                </div>
+                <div class="p-5 rounded-2xl bg-[#FAF8F5] border border-[#EFECE6] space-y-2">
+                    <h3 class="font-bold text-[#2D2A26] text-base">강화 학습 (Reinforcement Learning)</h3>
+                    <p class="text-[#6B655D] leading-relaxed text-xs">에이전트(Agent)가 환경(Environment)과 상호작용하며 특정 행동을 수행하고, 그 결과에 따른 보상(Reward)을 최대화하거나 벌칙을 최소화하는 방향으로 최적의 정책을 찾아가는 학습 방식입니다.</p>
+                </div>
+                <div class="p-5 rounded-2xl bg-[#FAF8F5] border border-[#EFECE6] space-y-2">
+                    <h3 class="font-bold text-[#2D2A26] text-base">퍼셉트론 (Perceptron)</h3>
+                    <p class="text-[#6B655D] leading-relaxed text-xs">프랑크 로젠블랫이 고안한 인공신경망의 가장 기초적인 단위(단층 신경망)로, 여러 개의 입력을 받아 각각의 가중치를 곱하고 편향을 더한 뒤 임계값을 거쳐 출력을 결정하는 구조입니다.</p>
+                </div>
+                <div class="p-5 rounded-2xl bg-[#FAF8F5] border border-[#EFECE6] space-y-2">
+                    <h3 class="font-bold text-[#2D2A26] text-base">선형 회귀 (Linear Regression)</h3>
+                    <p class="text-[#6B655D] leading-relaxed text-xs">연속적인 수치 데이터를 예측하기 위해 독립 변수와 종속 변수 간의 선형 상관관계 모델을 찾아내는 대표적인 지도 학습 알고리즘입니다.</p>
+                </div>
+                <div class="p-5 rounded-2xl bg-[#FAF8F5] border border-[#EFECE6] space-y-2">
+                    <h3 class="font-bold text-[#2D2A26] text-base">K-평균 군집화 (K-Means Clustering)</h3>
+                    <p class="text-[#6B655D] leading-relaxed text-xs">사전에 정의된 군집 개수(K)를 바탕으로 데이터들을 유사한 특성끼리 그룹으로 묶어주는 대표적인 비지도 학습 알고리즘입니다.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 파트 2. 인공지능 성능 평가 개념 및 지표 용어 -->
+        <section class="bg-white border border-[#EFECE6] rounded-3xl p-8 shadow-sm space-y-6">
+            <div class="border-b border-[#EFECE6] pb-4">
+                <span class="text-xs font-bold text-orange-600 uppercase tracking-wider">Part 02</span>
+                <h2 class="text-xl font-bold text-[#2D2A26] mt-1">인공지능 성능 평가 개념 및 지표 용어</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
+                <div class="p-5 rounded-2xl bg-[#FAF8F5] border border-[#EFECE6] space-y-2">
+                    <h3 class="font-bold text-[#2D2A26] text-base">정밀도 (Precision)</h3>
+                    <p class="text-[#6B655D] leading-relaxed text-xs">모델이 참(Positive)이라고 예측한 전체 결과 중에서, 실제로 참(Positive)인 데이터가 차지하는 비율입니다. (오탐지, 즉 거짓 양성인 FP를 줄이는 것이 중요할 때 강조되는 지표입니다.)</p>
+                </div>
+                <div class="p-5 rounded-2xl bg-[#FAF8F5] border border-[#EFECE6] space-y-2">
+                    <h3 class="font-bold text-[#2D2A26] text-base">재현율 (Recall / 민감도)</h3>
+                    <p class="text-[#6B655D] leading-relaxed text-xs">실제 참(Positive)인 전체 데이터 중에서, 모델이 참(Positive)이라고 올바르게 맞춘 비율입니다. (실제 양성을 놓치는 미탐지, 즉 거짓 음성인 FN을 줄이는 것이 중요할 때 강조되는 지표입니다.)</p>
+                </div>
+                <div class="p-5 rounded-2xl bg-[#FAF8F5] border border-[#EFECE6] space-y-2">
+                    <h3 class="font-bold text-[#2D2A26] text-base">정확도 (Accuracy)</h3>
+                    <p class="text-[#6B655D] leading-relaxed text-xs">전체 예측 데이터 개수 중 모델이 정답을 맞춘(참 양성 및 참 음성) 전체 비율을 뜻합니다. 다만 데이터의 불균형이 심할 경우 모델 성능을 왜곡할 위험이 있습니다.</p>
+                </div>
+                <div class="p-5 rounded-2xl bg-[#FAF8F5] border border-[#EFECE6] space-y-2">
+                    <h3 class="font-bold text-[#2D2A26] text-base">F1 스코어 (F1 Score)</h3>
+                    <p class="text-[#6B655D] leading-relaxed text-xs">정밀도와 재현율의 상호 절충(Trade-off) 관계를 보완하기 위해 두 지표의 조화 평균을 구하여 산출하는 종합적인 성능 평가 지표입니다.</p>
+                </div>
+                <div class="p-5 rounded-2xl bg-[#FAF8F5] border border-[#EFECE6] space-y-2">
+                    <h3 class="font-bold text-[#2D2A26] text-base">상호 절충 (Trade-off)</h3>
+                    <p class="text-[#6B655D] leading-relaxed text-xs">한쪽 지표(예: 정밀도)를 높이려 하면 다른 쪽 지표(예: 재현율)가 낮아지기 쉬운 역상관 관계를 의미합니다.</p>
+                </div>
+                <div class="p-5 rounded-2xl bg-[#FAF8F5] border border-[#EFECE6] space-y-2">
+                    <h3 class="font-bold text-[#2D2A26] text-base">참 양성 (TP, True Positive)</h3>
+                    <p class="text-[#6B655D] leading-relaxed text-xs">실제 참인 것을 모델이 참이라고 올바르게 예측한 경우입니다.</p>
+                </div>
+                <div class="p-5 rounded-2xl bg-[#FAF8F5] border border-[#EFECE6] space-y-2">
+                    <h3 class="font-bold text-[#2D2A26] text-base">거짓 양성 (FP, False Positive / 제1종 오류)</h3>
+                    <p class="text-[#6B655D] leading-relaxed text-xs">실제 거짓인 것을 모델이 참이라고 잘못 예측한 경우(오탐)입니다.</p>
+                </div>
+                <div class="p-5 rounded-2xl bg-[#FAF8F5] border border-[#EFECE6] space-y-2">
+                    <h3 class="font-bold text-[#2D2A26] text-base">거짓 음성 (FN, False Negative / 제2종 오류)</h3>
+                    <p class="text-[#6B655D] leading-relaxed text-xs">실제 참인 것을 모델이 거짓이라고 잘못 예측한 경우(미탐)입니다.</p>
+                </div>
+                <div class="p-5 rounded-2xl bg-[#FAF8F5] border border-[#EFECE6] space-y-2">
+                    <h3 class="font-bold text-[#2D2A26] text-base">참 음성 (TN, True Negative)</h3>
+                    <p class="text-[#6B655D] leading-relaxed text-xs">실제 거짓인 것을 모델이 거짓이라고 올바르게 예측한 경우입니다.</p>
+                </div>
+                <div class="p-5 rounded-2xl bg-[#FAF8F5] border border-[#EFECE6] space-y-2">
+                    <h3 class="font-bold text-[#2D2A26] text-base">ROC 곡선 (Receiver Operating Characteristic Curve)</h3>
+                    <p class="text-[#6B655D] leading-relaxed text-xs">이진 분류 모델의 임계값(Threshold) 변화에 따른 성능 변화를 시각화하기 위해 X축에 위양성률(FPR)을, Y축에 진짜양성률(TPR, 재현율)을 놓아 그린 곡선입니다.</p>
+                </div>
+                <div class="p-5 rounded-2xl bg-[#FAF8F5] border border-[#EFECE6] space-y-2">
+                    <h3 class="font-bold text-[#2D2A26] text-base">AUC (Area Under the ROC Curve)</h3>
+                    <p class="text-[#6B655D] leading-relaxed text-xs">ROC 곡선 아래의 면적을 뜻하며, 값이 1에 가까울수록 분류 모델의 전반적인 예측 성능이 우수함을 나타냅니다.</p>
+                </div>
+                <div class="p-5 rounded-2xl bg-[#FAF8F5] border border-[#EFECE6] space-y-2">
+                    <h3 class="font-bold text-[#2D2A26] text-base">매크로 평균 (Macro Average)</h3>
+                    <p class="text-[#6B655D] leading-relaxed text-xs">다중 클래스 분류 문제에서 각 클래스별 성능을 데이터 개수의 비중과 상관없이 동일한 비중으로 단순 평균 내어 구하는 평가 방식입니다.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 하단 네비게이션 버튼 -->
+        <div class="flex justify-between items-center pt-6">
+            <a href="index.html" class="bg-white hover:bg-[#F4F1EA] border border-[#EFECE6] text-[#2D2A26] px-5 py-2.5 rounded-xl text-sm font-medium transition shadow-sm">← 메인 홈</a>
+            <a href="exam-info.html" class="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2.5 rounded-xl text-sm font-semibold transition shadow-sm">시험 정보 및 접수 안내 →</a>
+        </div>
+    </main>
+
+    <!-- 푸터 -->
+    <footer class="bg-white border-t border-[#EFECE6] py-8 text-center text-xs text-[#8C857B] space-y-3 shrink-0 mt-12">
+        <div class="flex justify-center space-x-6 font-medium">
+            <a href="index.html" class="hover:text-[#2D2A26]">홈</a>
+            <a href="exam-info.html" class="hover:text-[#2D2A26]">시험개요</a>
+            <a href="privacy.html" class="hover:text-[#2D2A26]">개인정보처리방침</a>
+            <a href="terms.html" class="hover:text-[#2D2A26]">이용약관</a>
+        </div>
+        <p>© 2026 AI-POT Study Portal. All rights reserved.</p>
+    </footer>
+</body>
+</html>

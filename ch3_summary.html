@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 3. 프롬프트 엔지니어링 기술 기초 및 용어 정리 | AI 프롬프트활용능력 2급</title>
+    <meta name="description" content="AI 프롬프트활용능력 2급 Chapter 3 프롬프트 엔지니어링 개념, 자연어 처리(NLP), NLU, NLG, 작성 기본 원칙 및 역할 부여 완벽 정리">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Pretendard:wght@400;500;600;700&display=swap'); body { font-family: 'Pretendard', sans-serif; }</style>
+</head>
+<body class="bg-[#FAF8F5] text-[#2D2A26] min-h-screen flex flex-col antialiased selection:bg-orange-200 selection:text-orange-900">
+
+    <!-- 상단 네비게이션 바 -->
+    <header class="bg-white/80 backdrop-blur-md border-b border-[#EFECE6] sticky top-0 z-50 shadow-sm">
+        <div class="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="index.html" class="flex items-center space-x-2.5">
+                <span class="bg-orange-500 text-white text-xs font-bold px-2.5 py-1 rounded-md shadow-sm">KPC AI-POT</span>
+                <span class="font-bold text-[#2D2A26] text-lg tracking-tight">AI 프롬프트활용능력 2급</span>
+            </a>
+            <nav class="hidden md:flex space-x-6 text-sm font-medium text-[#6B655D]">
+                <a href="index.html" class="hover:text-orange-600 transition">홈</a>
+                    <a href="exam-info.html" class="hover:text-orange-600 transition">시험개요</a>
+            
+                <a href="ch3.html" class="text-orange-600 font-bold">ch3. 프롬프트 엔지니어링 기술 기초 핵심요약 & 기출 20제</a>
+                <a href="ch1_cbt.html" class="hover:text-orange-600 transition">CBT 모의고사</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 메인 컨텐츠 영역 -->
+    <main class="max-w-4xl mx-auto px-6 py-12 flex-1 space-y-12">
+        
+        <!-- 타이틀 섹션 -->
+        <section class="bg-white border border-[#EFECE6] rounded-3xl p-8 md:p-12 shadow-sm space-y-4">
+            <span class="inline-block bg-orange-50 text-orange-600 text-xs font-bold px-3 py-1 rounded-full border border-orange-100">Chapter 03</span>
+            <h1 class="text-3xl font-extrabold text-[#2D2A26] tracking-tight">프롬프트 엔지니어링 기술 기초 및 핵심 용어 총정리</h1>
+            <p class="text-[#6B655D] leading-relaxed text-base">
+                프롬프트 엔지니어링의 개념적 정의와 역사적 배경, 인공지능이 언어를 이해하고 생성하는 자연어 기술(NLU, NLG), 그리고 고품질 답변을 도출하기 위한 프롬프트 작성의 기본 원칙(역할 부여, 명확한 지시, 제약 조건 등)을 상세히 정리했습니다.
+            </p>
+        </section>
+
+        <!-- 파트 1. 프롬프트 엔지니어링의 개념 및 역사 -->
+        <section class="bg-white border border-[#EFECE6] rounded-3xl p-8 shadow-sm space-y-6">
+            <div class="border-b border-[#EFECE6] pb-4">
+                <span class="text-xs font-bold text-orange-600 uppercase tracking-wider">Part 01</span>
+                <h2 class="text-xl font-bold text-[#2D2A26] mt-1">프롬프트 엔지니어링의 개념 및 역사</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
+                <div class="p-5 rounded-2xl bg-[#FAF8F5] border border-[#EFECE6] space-y-2">
+                    <h3 class="font-bold text-[#2D2A26] text-base">프롬프트 엔지니어링 (Prompt Engineering)</h3>
+                    <p class="text-[#6B655D] leading-relaxed text-xs">인공지능 모델이 가장 정확하고 유용한 결과물을 생성할 수 있도록 최적의 명령어와 문맥 구조(프롬프트)를 설계하고 최적화하는 기술 및 방법론입니다.</p>
+                </div>
+                <div class="p-5 rounded-2xl bg-[#FAF8F5] border border-[#EFECE6] space-y-2">
+                    <h3 class="font-bold text-[#2D2A26] text-base">인컨텍스트 러닝 (In-Context Learning)</h3>
+                    <p class="text-[#6B655D] leading-relaxed text-xs">모델의 가중치를 직접 수정하지 않고, 입력 프롬프트 내에 제공된 설명이나 예시만으로 모델이 새로운 태스크를 즉석에서 학습하고 수행하게 만드는 특성입니다.</p>
+                </div>
+                <div class="p-5 rounded-2xl bg-[#FAF8F5] border border-[#EFECE6] space-y-2">
+                    <h3 class="font-bold text-[#2D2A26] text-base">토큰 기반 인터페이스 (Token-based Interface)</h3>
+                    <p class="text-[#6B655D] leading-relaxed text-xs">초기의 복잡한 프로그래밍 언어나 API 명령어 입력 방식에서 벗어나, 인간의 자연어로 소통하며 AI를 제어할 수 있게 된 대화형 인터페이스 패러다임입니다.</p>
+                </div>
+                <div class="p-5 rounded-2xl bg-[#FAF8F5] border border-[#EFECE6] space-y-2">
+                    <h3 class="font-bold text-[#2D2A26] text-base">프롬프트 인지 패러다임 전환</h3>
+                    <p class="text-[#6B655D] leading-relaxed text-xs">과거 머신러닝 모델 구축을 위해 방대한 코딩과 모델 구조 설계가 중심이던 시대에서, 정교한 질문과 지시문 구성이 성능을 좌우하는 프롬프트 중심 시대로의 패러다임 변화를 의미합니다.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 파트 2. 생성 AI를 위한 자연어 기술 이해 -->
+        <section class="bg-white border border-[#EFECE6] rounded-3xl p-8 shadow-sm space-y-6">
+            <div class="border-b border-[#EFECE6] pb-4">
+                <span class="text-xs font-bold text-orange-600 uppercase tracking-wider">Part 02</span>
+                <h2 class="text-xl font-bold text-[#2D2A26] mt-1">생성 AI를 위한 자연어 기술 이해</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
+                <div class="p-5 rounded-2xl bg-[#FAF8F5] border border-[#EFECE6] space-y-2">
+                    <h3 class="font-bold text-[#2D2A26] text-base">자연어 처리 (NLP, Natural Language Processing)</h3>
+                    <p class="text-[#6B655D] leading-relaxed text-xs">인간이 사용하는 일상적인 언어를 컴퓨터가 분석하고 이해하며 처리할 수 있도록 하는 인공지능의 핵심 기술 분야입니다.</p>
+                </div>
+                <div class="p-5 rounded-2xl bg-[#FAF8F5] border border-[#EFECE6] space-y-2">
+                    <h3 class="font-bold text-[#2D2A26] text-base">NLU (자연어 이해, Natural Language Understanding)</h3>
+                    <p class="text-[#6B655D] leading-relaxed text-xs">인간이 입력한 텍스트의 문법적 구조, 단어 간 관계, 숨겨진 의미와 의도(Intent)를 컴퓨터가 정확히 파악하고 해석하는 기술 영역입니다.</p>
+                </div>
+                <div class="p-5 rounded-2xl bg-[#FAF8F5] border border-[#EFECE6] space-y-2">
+                    <h3 class="font-bold text-[#2D2A26] text-base">NLG (자연어 생성, Natural Language Generation)</h3>
+                    <p class="text-[#6B655D] leading-relaxed text-xs">컴퓨터가 분석된 데이터를 바탕으로 문맥에 맞는 자연스럽고 유창한 문장 형태의 텍스트 결과물을 스스로 조합하여 출력하는 기술 영역입니다.</p>
+                </div>
+                <div class="p-5 rounded-2xl bg-[#FAF8F5] border border-[#EFECE6] space-y-2">
+                    <h3 class="font-bold text-[#2D2A26] text-base">시의성과 모호성 처리 (Ambiguity Resolution)</h3>
+                    <p class="text-[#6B655D] leading-relaxed text-xs">다의어나 문맥에 따라 뜻이 달라지는 표현 등 인간 언어의 고유한 모호성을 LLM이 문맥적 확률에 기반하여 올바르게 해석해 내는 능력입니다.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 파트 3. 프롬프트 작성의 기본 원칙 -->
+        <section class="bg-white border border-[#EFECE6] rounded-3xl p-8 shadow-sm space-y-6">
+            <div class="border-b border-[#EFECE6] pb-4">
+                <span class="text-xs font-bold text-orange-600 uppercase tracking-wider">Part 03</span>
+                <h2 class="text-xl font-bold text-[#2D2A26] mt-1">프롬프트 작성의 기본 원칙</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
+                <div class="p-5 rounded-2xl bg-[#FAF8F5] border border-[#EFECE6] space-y-2">
+                    <h3 class="font-bold text-[#2D2A26] text-base">역할 부여 (Role Prompting)</h3>
+                    <p class="text-[#6B655D] leading-relaxed text-xs">AI에게 특정한 전문가나 페르소나(예: 법률 자문가, 수석 마케터 등)의 신분을 부여하여 해당 전문 분야에 알맞은 어조와 깊이 있는 답변을 이끌어내는 원칙입니다.</p>
+                </div>
+                <div class="p-5 rounded-2xl bg-[#FAF8F5] border border-[#EFECE6] space-y-2">
+                    <h3 class="font-bold text-[#2D2A26] text-base">명확한 지시 (Clear Instruction)</h3>
+                    <p class="text-[#6B655D] leading-relaxed text-xs">모호하고 추상적인 표현을 배제하고, AI가 수행해야 할 작업의 목표와 행동 요령을 구체적이고 직관적인 동사로 지시하는 원칙입니다.</p>
+                </div>
+                <div class="p-5 rounded-2xl bg-[#FAF8F5] border border-[#EFECE6] space-y-2">
+                    <h3 class="font-bold text-[#2D2A26] text-base">맥락 제공 (Context Provision)</h3>
+                    <p class="text-[#6B655D] leading-relaxed text-xs">작업이 진행되는 배경, 대상 타겟, 목적 등 구체적인 상황 정보를 함께 제공하여 AI가 상황에 꼭 맞는 맞춤형 답변을 생성하도록 돕는 원칙입니다.</p>
+                </div>
+                <div class="p-5 rounded-2xl bg-[#FAF8F5] border border-[#EFECE6] space-y-2">
+                    <h3 class="font-bold text-[#2D2A26] text-base">제약 조건 설정 (Constraints)</h3>
+                    <p class="text-[#6B655D] leading-relaxed text-xs">응답의 최대 글자 수, 형식(불렛포인트 등), 포함하거나 배제해야 할 키워드 등을 미리 제한하여 원하는 형태의 결과물을 정확히 얻어내는 원칙입니다.</p>
+                </div>
+                <div class="p-5 rounded-2xl bg-[#FAF8F5] border border-[#EFECE6] space-y-2">
+                    <h3 class="font-bold text-[#2D2A26] text-base">출력 형식 지정 (Output Formatting)</h3>
+                    <p class="text-[#6B655D] leading-relaxed text-xs">결과물을 표(Table), 마크다운, JSON, 번호 매기기 등 특정한 구조나 포맷으로 출력하도록 사전에 명시하는 작성 기법입니다.</p>
+                </div>
+                <div class="p-5 rounded-2xl bg-[#FAF8F5] border border-[#EFECE6] space-y-2">
+                    <h3 class="font-bold text-[#2D2A26] text-base">긍정형 지시 (Positive Instruction)</h3>
+                    <p class="text-[#6B655D] leading-relaxed text-xs">'~하지 마라'는 부정적 제약보다 '~한 방식으로 작성하라'는 긍정적인 지시문을 사용하는 것이 AI의 오류를 줄이고 정확도를 높이는 작성 원칙입니다.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 하단 네비게이션 버튼 -->
+        <div class="flex justify-between items-center pt-6">
+            <a href="ch2_summary.html" class="bg-white hover:bg-[#F4F1EA] border border-[#EFECE6] text-[#2D2A26] px-5 py-2.5 rounded-xl text-sm font-medium transition shadow-sm">← Ch 2. 생성 AI 기초</a>
+            <a href="exam-info.html" class="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2.5 rounded-xl text-sm font-semibold transition shadow-sm">시험 정보 및 접수 안내 →</a>
+        </div>
+    </main>
+
+    <!-- 푸터 -->
+     <footer class="bg-white border-t border-[#EFECE6] py-8 text-center text-xs text-[#8C857B] space-y-3 shrink-0 mt-12">
+        <div class="flex justify-center space-x-6 font-medium">
+            <a href="index.html" class="hover:text-[#2D2A26]">홈</a>
+            <a href="exam-info.html" class="hover:text-[#2D2A26]">시험개요</a>
+            <a href="privacy.html" class="hover:text-[#2D2A26]">개인정보처리방침</a>
+            <a href="terms.html" class="hover:text-[#2D2A26]">이용약관</a>
+        </div>
+        <p>© 2026 AI-POT Study Portal. All rights reserved.</p>
+    </footer>
+</body>
+</html>
