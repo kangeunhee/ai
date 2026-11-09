@@ -54,7 +54,6 @@
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://misopitch.kr/ch3_summary.html</loc> <!-- 오타 주의 -->
         <loc>https://misopick.kr/ch3_summary.html</loc>
         <lastmod>2026-11-09</lastmod>
         <changefreq>monthly</changefreq>
