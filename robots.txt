@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://misopick.kr/sitemap.xml
