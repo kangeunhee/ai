@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 프롬프트활용능력 2급 B형 실전 CBT 모의고사 | 무료 기출 문제풀이</title>
+    <meta name="description" content="KPC AI 프롬프트활용능력 2급 자격시험 B형 기출 40문항 완벽 반영 실전 CBT 시뮬레이터 및 상세 해설 제공">
+    <!-- 외부 라이브러리(Tailwind 등)를 전면 제거하고 시맨틱 HTML과 순수 internal CSS로 구현 -->
+          <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2888840483385554"
+     crossorigin="anonymous"></script>
+      <link rel="canonical" href="https://misopick.kr/mock_exam_b.html">
+<style>
+    /* Pretendard 및 기본 시스템 폰트 설정 */
+    @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+    
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif; background-color: #faf8f5; color: #2d2a26; line-height: 1.6; }
+    
+    /* 상단 네비게이션 헤더 */
+    header { background-color: #ffffff; border-bottom: 1px solid #efece6; position: sticky; top: 0; z-index: 100; }
+    .header-inner { max-width: 1200px; margin: 0 auto; padding: 14px 20px; display: flex; align-items: center; justify-content: space-between; }
+    .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; color: #2d2a26; font-weight: bold; font-size: 18px; }
+    .logo-badge { background-color: #ea580c; color: #ffffff; font-size: 11px; padding: 3px 8px; border-radius: 4px; font-weight: 700; }
+    nav a { color: #6b655d; text-decoration: none; font-size: 14px; font-weight: 500; margin-left: 20px; }
+    nav a:hover, nav a.active { color: #ea580c; font-weight: 700; }
+    
+    /* 애드센스 광고 상단 영역 확보 */
+    .adsense-header-banner { background-color: #ffffff; border-bottom: 1px solid #efece6; padding: 15px; text-align: center; margin-bottom: 20px; }
+    .adsense-placeholder { background-color: #f4f1ea; border: 1px dashed #d9d4c7; color: #78716c; font-size: 12px; padding: 15px; border-radius: 8px; max-width: 970px; margin: 0 auto; }
+
+    /* CBT 상태 및 타이머 바 */
+    .cbt-bar { background-color: #ffffff; border: 1px solid #efece6; border-radius: 16px; padding: 15px 25px; max-width: 1200px; margin: 0 auto 24px auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+    .cbt-title { font-size: 18px; font-weight: 800; color: #1c1917; display: flex; align-items: center; gap: 10px; }
+    .cbt-tag { background-color: #fff7ed; color: #ea580c; border: 1px solid #ffedd5; font-size: 12px; padding: 4px 10px; border-radius: 20px; font-weight: 700; }
+    .cbt-controls { display: flex; align-items: center; gap: 15px; }
+    .timer-box { background-color: #faf8f5; border: 1px solid #efece6; padding: 8px 16px; border-radius: 10px; font-family: monospace; font-weight: 700; color: #ea580c; font-size: 15px; }
+    .btn-submit { background-color: #ea580c; color: #ffffff; border: none; padding: 10px 20px; border-radius: 10px; font-size: 14px; font-weight: 700; cursor: pointer; transition: background 0.2s; }
+    .btn-submit:hover { background-color: #c2410c; }
+
+    /* 레이아웃 구성 */
+    .main-layout { max-width: 1200px; margin: 0 auto 50px auto; padding: 0 20px; display: grid; grid-template-columns: 1fr 320px; gap: 24px; }
+    @media (max-width: 992px) { .main-layout { grid-template-columns: 1fr; } }
+
+    /* 좌측: 문제지 컨테이너 */
+    .exam-container { display: flex; flex-direction: column; gap: 20px; }
+    .question-card { background-color: #ffffff; border: 1px solid #efece6; border-radius: 16px; padding: 25px; box-shadow: 0 1px 3px rgba(0,0,0,0.02); }
+    .q-header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #efece6; pb: 10px; margin-bottom: 15px; padding-bottom: 10px; }
+    .q-num { background-color: #fff7ed; color: #ea580c; border: 1px solid #ffedd5; font-size: 12px; font-weight: 700; padding: 3px 10px; border-radius: 12px; }
+    .q-type { font-size: 12px; color: #78716c; }
+    .q-title { font-size: 16px; font-weight: 700; color: #2d2a26; margin-bottom: 16px; line-height: 1.5; }
+    .q-subtext { font-size: 13px; color: #6b655d; background-color: #faf8f5; border: 1px solid #efece6; padding: 10px 14px; border-radius: 8px; margin-bottom: 14px; display: block; }
+    
+    /* 보기도구 레이아웃 */
+    .options-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    @media (max-width: 640px) { .options-grid { grid-template-columns: 1fr; } }
+    .option-label { display: flex; align-items: center; gap: 10px; padding: 12px 14px; background-color: #faf8f5; border: 1px solid #efece6; border-radius: 10px; cursor: pointer; font-size: 14px; transition: all 0.2s; }
+    .option-label:hover { border-color: #fdba74; background-color: #fff7ed; }
+    .option-label input[type="radio"] { accent-color: #ea580c; width: 16px; height: 16px; }
+    .text-input { width: 100%; max-width: 400px; padding: 12px; border: 1px solid #efece6; border-radius: 10px; background-color: #faf8f5; font-size: 14px; font-weight: 600; outline: none; }
+    .text-input:focus { border-color: #ea580c; background-color: #ffffff; }
+
+    /* 해설 박스 */
+    .explanation-box { display: none; margin-top: 15px; padding: 15px; background-color: #faf8f5; border-top: 1px solid #efece6; border-radius: 10px; font-size: 13px; color: #57534e; }
+    .exp-answer { font-weight: 700; color: #ea580c; margin-bottom: 5px; }
+
+    /* 우측: OMR 답안지 패널 */
+    .omr-sidebar { position: sticky; top: 90px; background-color: #ffffff; border: 1px solid #efece6; border-radius: 16px; padding: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.02); height: fit-content; }
+    .omr-header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #efece6; padding-bottom: 12px; margin-bottom: 15px; }
+    .omr-title { font-size: 15px; font-weight: 700; color: #2d2a26; }
+    .omr-counter { font-size: 12px; font-weight: 700; color: #ea580c; background-color: #fff7ed; padding: 2px 8px; border-radius: 6px; }
+    .omr-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; max-height: 400px; overflow-y: auto; padding-right: 4px; }
+    .omr-btn { padding: 8px 0; background-color: #faf8f5; border: 1px solid #efece6; border-radius: 8px; font-size: 12px; font-weight: 700; color: #78716c; cursor: pointer; text-align: center; }
+    .omr-btn.active { background-color: #ea580c; color: #ffffff; border-color: #c2410c; }
+
+    /* 채점 리포트 모달 */
+    .result-report { display: none; background-color: #ffffff; border: 2px solid #ea580c; border-radius: 16px; padding: 30px; margin-bottom: 24px; }
+    .report-header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #efece6; padding-bottom: 12px; margin-bottom: 20px; }
+    .report-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; text-align: center; margin-bottom: 15px; }
+    .report-stat-box { background-color: #faf8f5; border: 1px solid #efece6; padding: 15px; border-radius: 12px; }
+    .report-stat-label { font-size: 12px; color: #78716c; margin-bottom: 5px; display: block; }
+    .report-stat-val { font-size: 24px; font-weight: 800; color: #ea580c; }
+    .pass-badge { padding: 6px 16px; border-radius: 20px; font-size: 13px; font-weight: 700; }
+    .pass-badge.pass { background-color: #dcfce7; color: #15803d; border: 1px solid #bbf7d0; }
+    .pass-badge.fail { background-color: #fee2e2; color: #b91c1c; border: 1px solid #fecaca; }
+
+    /* 푸터 영역 (애드센스 필수 링크 포함) */
+    footer { background-color: #ffffff; border-top: 1px solid #efece6; padding: 40px 20px; text-align: center; font-size: 13px; color: #78716c; margin-top: auto; }
+    .footer-links { margin-bottom: 12px; }
+    .footer-links a { color: #57534e; text-decoration: none; margin: 0 10px; font-weight: 500; }
+    .footer-links a:hover { color: #ea580c; text-decoration: underline; }
+</style>
+
+
+<!-- 상단 네비게이션 헤더 -->
+<header>
+    <div class="header-inner">
+        <a href="index.html" class="logo">
+            <span class="logo-badge">KPC AI-POT</span>
+            <span>AI 프롬프트활용능력 2급</span>
+        </a>
+        <nav>
+            <a href="index.html">홈</a>            
+            <a href="ch1_cbt.html">모의고사 바로가기</a>
+            <a href="mock_exam_a.html">오픈기출문제 A형 바로가기</a>
+        </nav>
+    </div>
+</header>
+
+
+
+<!-- CBT 메인 헤더 및 컨트롤 바 -->
+<div style="padding: 0 20px;">
+    <div class="cbt-bar">
+        <div class="cbt-title">
+            <span class="cbt-tag">공식 기출 복원</span>
+            <span>AI-POT 2급 기출문제 [B형 40문항]</span>
+        </div>
+        <div class="cbt-controls">
+            <div class="timer-box">남은 시간: <span id="timer-display">60:00</span></div>
+            <button type="button" onclick="submitExam()" class="btn-submit">답안 제출 및 채점</button>
+        </div>
+    </div>
+</div>
+
+<!-- CBT 메인 2컬럼 레이아웃 -->
+<main class="main-layout">
+    
+    <!-- 좌측 문제지 영역 -->
+    <section class="exam-container">
+        
+        <!-- 채점 결과 리포트 (제출 시 동적 노출) -->
+        <div id="result-report" class="result-report">
+            <div class="report-header">
+                <h2 style="font-size: 20px; font-weight: 800;">B형 기출모의고사 채점 결과 보고서</h2>
+                <span id="pass-badge" class="pass-badge"></span>
+            </div>
+            <div class="report-grid">
+                <div class="report-stat-box">
+                    <span class="report-stat-label">총 득점</span>
+                    <span id="total-score" class="report-stat-val">0점</span>
+                </div>
+                <div class="report-stat-box">
+                    <span class="report-stat-label">정답 문항 수</span>
+                    <span id="correct-count" class="report-stat-val" style="color: #2d2a26;">0 / 40</span>
+                </div>
+                <div class="report-stat-box">
+                    <span class="report-stat-label">합격 기준선</span>
+                    <span class="report-stat-val" style="color: #6b655d;">70점 이상</span>
+                </div>
+            </div>
+            <p style="font-size: 13px; color: #78716c;">각 문항 하단에 표시된 <strong>[정답 및 상세 해설]</strong> 영역을 복습하여 오답 노트를 작성해 보세요.</p>
+        </div>
+
+        <!-- 문제 동적 렌더링 폼 -->
+        <form id="exam-form" class="exam-container">
+            <!-- 자바스크립트에 의해 40문항 카드 데이터가 생성됩니다 -->
+        </form>
+    </section>
+
+    <!-- 우측 OMR 사이드바 -->
+    <aside>
+        <div class="omr-sidebar">
+            <div class="omr-header">
+                <span class="omr-title">OMR 답안 현황</span>
+                <span id="answered-counter" class="omr-counter">0 / 40 작성</span>
+            </div>
+            <div id="omr-grid" class="omr-grid">
+                <!-- OMR 1~40 번호 버튼 동적 생성 -->
+            </div>
+            <div style="margin-top: 20px;">
+                <button type="button" onclick="submitExam()" class="btn-submit" style="width: 100%; padding: 12px 0;">실시간 채점하기</button>
+            </div>
+        </div>
+    </aside>
+
+</main>
+
+<!-- 애드센스 승인 필수 고지 푸터 -->
+   <footer class="bg-white border-t border-[#EFECE6] py-8 text-center text-xs text-[#8C857B] space-y-3 shrink-0 mt-12">
+        <div class="flex justify-center space-x-6 font-medium">
+            <a href="index.html" class="hover:text-[#2D2A26]">홈</a>
+            <a href="privacy.html" class="hover:text-[#2D2A26]">개인정보처리방침</a>
+            <a href="terms.html" class="hover:text-[#2D2A26]">이용약관</a>
+        </div>
+        <p>© 2026 AI-POT Study Portal. All rights reserved.</p>
+    </footer>
+
+<!-- 순수 자바스크립트 채점 및 인터랙션 로직 -->
+<script>
+    // B형 기출 40문항 전체 데이터셋
+    const examQuestions = [
+        { qNum: 1, type: "mc", title: "다음 중 인공지능의 원리가 아닌 것을 고르시오.", options: ["학습(Learning)", "추론(Reasoning)", "적응(Adaptation)", "채택(Adoption)"], ans: "4", exp: "인공지능의 3대 핵심 원리는 학습(Learning), 추론(Reasoning), 적응(Adaptation)입니다." },
+        { qNum: 2, type: "mc", title: "다음 보기의 (ㄱ)에 들어갈 내용으로 적합한 것을 고르시오.", subtext: "[보기] (ㄱ): 사고나 학습 등 인간이 가진 지적 능력을 컴퓨터를 통해 구현하는 기술 (머신러닝과 딥러닝을 포함하는 상위 개념)", options: ["인공지능", "인간지능", "자아지능", "자기지능"], ans: "1", exp: "인간의 지적 능력을 컴퓨터로 구현하는 최고위 기술 개념은 인공지능(AI)입니다." },
+        { qNum: 3, type: "mc", title: "다음 중 인공지능을 학습할 때 필요한 장비로 거리가 먼 것을 고르시오.", options: ["중앙처리장치(CPU)", "메인 메모리(RAM)", "그래픽 처리 장치(GPU)", "네트워크 연결 스토리지(NAS)"], ans: "4", exp: "NAS는 단순 네트워크 저장 장치로 AI 모델 연산 및 데이터 처리의 핵심 장비가 아닙니다." },
+        { qNum: 4, type: "mc", title: "다음 보기의 (ㄱ), (ㄴ)에 들어갈 머신러닝 유형으로 올바른 것을 고르시오.", subtext: "- (ㄱ): 정답 없이 학습 데이터로 학습, 군집화 등에 사용\n- (ㄴ): 시뮬레이션 반복 학습, 보상/벌칙을 통한 성능 강화 등에 사용", options: ["강화 학습 - 비지도 학습", "비지도 학습 - 강화 학습", "반지도 학습 - 강화 학습", "반복 학습 - 비지도 학습"], ans: "2", exp: "정답 없이 군집화하는 것은 비지도 학습, 보상 시뮬레이션을 수행하는 것은 강화 학습입니다." },
+        { qNum: 5, type: "mc", title: "매우 큰 규모의 데이터셋을 학습한 후 인간의 언어를 이해하고 텍스트 생성, 번역, 질문 답변 등을 수행하는 인공지능 모델은?", options: ["거대 언어 모델(LLM)", "스테이블 디퓨전(Stable Diffusion)", "클로드 3(Claude 3)", "제미나이(Gemini)"], ans: "1", exp: "수십억 개 이상의 매개변수로 자연어를 처리하는 대규모 인공지능 모델은 LLM입니다." },
+        { qNum: 6, type: "mc", title: "생성자(Generator)와 판별자(Discriminator)가 적대적 경쟁 과정을 통해 함께 학습하며 가짜 데이터를 생성하는 인공지능 모델은?", options: ["사전 학습(Pre-training)", "변이형 자동 인코더(VAE)", "생산적 적대 신경망(GAN)", "미세 조정(Fine-tuning)"], ans: "3", exp: "생성자와 판별자의 적대적 경쟁 구조 알고리즘은 GAN입니다." },
+        { qNum: 7, type: "mc", title: "다음 중 GPT의 약자 구성으로 올바르게 짝지어진 것을 고르시오.", subtext: "[ㄱ.Generative / ㄴ.Generation / ㄷ.Pre-trained / ㄹ.Pre-tuned / ㅁ.Translator / ㅂ.Transformer]", options: ["ㄱ, ㄴ, ㄷ", "ㄱ, ㄹ, ㅁ", "ㄱ, ㄷ, ㄹ", "ㄱ, ㄷ, ㅂ"], ans: "4", exp: "GPT는 Generative Pre-trained Transformer의 약자입니다." },
+        { qNum: 8, type: "mc", title: "다음 중 챗GPT를 효과적으로 사용하기 위한 질의 규칙으로 적절하지 않은 것을 고르시오.", options: ["명확하게 질문해야 한다.", "목적을 말하지 않아도 된다.", "배경 정보를 제공해야 한다.", "질문의 범위를 제한해야 한다."], ans: "2", exp: "챗GPT 답변 정확도를 높이려면 질문 목적과 맥락 정보를 구체적으로 명시해야 합니다." },
+        { qNum: 9, type: "mc", title: "마이크로소프트 코파일럿(Copilot)에서 그림 및 이미지를 생성할 때 내부적으로 사용하는 생성 AI는?", options: ["디스코 디퓨전", "미드저니", "달리(DALL-E)", "나이트카페"], ans: "3", exp: "Copilot의 이미지 생성 엔진은 OpenAI의 DALL-E 모델을 바탕으로 동작합니다." },
+        { qNum: 10, type: "mc", title: "미드저니(Midjourney)에서 특정 요소나 사물을 생성 이미지에서 제외할 때 사용하는 파라미터는?", options: ["--out", "--exclude", "--delete", "--no"], ans: "4", exp: "미드저니의 부정 프롬프트 파라미터는 --no 입니다." },
+        { qNum: 11, type: "mc", title: "챗GPT 질문 응답 시 역사적 사실과 다른 거짓 정보를 확신에 찬 어조로 그럴듯하게 생성해내는 오류 현상은?", options: ["환각(Hallucination)", "프롬프트 주입(Prompt Injection)", "프롬프트 해킹", "탈옥(Jailbreaking)"], ans: "1", exp: "거짓 정보를 사실처럼 생성해내는 오류를 환각(Hallucination) 현상이라 합니다." },
+        { qNum: 12, type: "mc", title: "텍스트, 이미지, 문서 등 두 종류 이상의 데이터 유형을 프롬프트 입력으로 동시에 사용하는 기법은?", options: ["미디어 프롬프트", "매니 프롬프트", "멀티모달 프롬프트(Multi-modal Prompt)", "프롬프트 주입"], ans: "3", exp: "복수의 미디어 유형을 동시 입력하는 기법은 멀티모달 프롬프트입니다." },
+        { qNum: 13, type: "mc", title: "챗GPT 프롬프트 설정 중 Temperature 파라미터를 2.0(최대값)으로 설정했을 때 기대되는 결과는?", options: ["라면 끓이는 방법을 일률적으로 출력한다.", "일류호텔 주방장 역할로 보다 창의적인 라면 레시피를 출력한다.", "다양한 면요리 레시피를 알려준다.", "주방장 역할을 수행하지 않는다."], ans: "2", exp: "Temperature 값이 높을수록 답변의 창의성과 무작위성이 높아집니다." },
+        { qNum: 14, type: "mc", title: "다음 중 프롬프트의 4대 핵심 구성요소에 해당하지 않는 것을 고르시오.", options: ["지시(Instruction)", "맥락 정보(Context)", "입력 데이터(Input Data)", "프로세스(Process)"], ans: "4", exp: "프롬프트 4대 구성요소는 지시, 맥락, 입력 데이터, 출력 형식입니다." },
+        { qNum: 15, type: "mc", title: "다음 중 챗GPT의 주요 특징에 대한 설명으로 옳지 않은 것을 고르시오.", options: ["다양한 자연어 처리 작업이 가능하다.", "제한적인 데이터셋만 사용 가능하다.", "대용량 모델이다.", "맞춤형 모델 학습 및 대화가 가능하다."], ans: "2", exp: "챗GPT는 대용량 인터넷 빅데이터셋을 학습한 사전 학습 모델입니다." },
+        { qNum: 16, type: "mc", title: "오픈AI에서 개발했으며 픽사 로봇 캐릭터와 스페인 화가 이름에서 유래한 이미지 생성 AI 서비스는?", options: ["코파일럿", "스테이블 디퓨전", "제미나이", "달리(DALL-E)"], ans: "4", exp: "영화 WALL-E와 화가 Salvador Dali의 합성어로 만든 서비스는 DALL-E입니다." },
+        { qNum: 17, type: "mc", title: "스테이블 디퓨전 화면에서 저해상도, 찌그러진 손 등 원치 않는 요소를 배제하는 입력란의 명칭은?", options: ["프롬프트(Prompt)", "제너레이트(Generate)", "최대 피드백 이미지", "네거티브 프롬프트(Negative Prompt)"], ans: "4", exp: "원하지 않는 불량 요소를 배제하는 칸은 네거티브 프롬프트입니다." },
+        { qNum: 18, type: "mc", title: "DALL-E 등을 활용해 저해상도의 이미지를 선명한 고해상도로 확장·변환하는 기술 명칭은?", options: ["업스케일링(Upscaling)", "자연 스타일", "생생 스타일", "리얼리즘"], ans: "1", exp: "저해상도 이미지를 고해상도로 픽셀을 올리는 기술은 업스케일링(Upscaling)입니다." },
+        { qNum: 19, type: "mc", title: "챗GPT가 CSV 처리 과정에서 실존하지 않는 데이터나 수집된 데이터를 바탕으로 새롭게 생성해낸 데이터 유형은?", options: ["데이터 파생", "가상 데이터", "창조된 데이터", "합성 데이터(Synthetic Data)"], ans: "4", exp: "AI에 의해 통계적 특성을 따라 새롭게 생성된 데이터는 합성 데이터입니다." },
+        { qNum: 20, type: "mc", title: "스테이블 디퓨전에서 인물의 관절 위치와 포즈 뼈대를 지정하여 자세를 제어하는 도구의 명칭은?", options: ["해골(Skeleton)", "라이브2D", "오픈포즈(OpenPose)", "와이어프레임"], ans: "3", exp: "인체 관절 포즈 제어 도구는 OpenPose입니다." },
+        { qNum: 21, type: "mc", title: "미드저니 프롬프트 'picture of a girl dressed in flowers --ar 16:9 --chaos 35 --q 25' 보기 설명 중 잘못된 것은?", options: ["그림에 꽃이 들어가도록 프롬프트를 작성했다.", "가로 대 세로 화면 비율은 9:16이다.", "자유도(변형도)를 35만큼 주었다.", "이미지 품질을 25 설정으로 지정했다."], ans: "2", exp: "--ar 16:9는 가로 16 : 세로 9 비율을 의미하므로 9:16 설명은 잘못되었습니다." },
+        { qNum: 22, type: "mc", title: "스테이블 디퓨전에서 손 모양 손가락 오류를 조치하는 방법으로 적절하지 않은 것은?", options: ["네거티브 프롬프트에 'Extra fingers'를 입력한다.", "프롬프트란에 'Cinematic'을 입력한다.", "손이 드러나지 않는 포즈로 프롬프트를 수정한다.", "네거티브 프롬프트에 'Poor hands'를 입력한다."], ans: "2", exp: "'Cinematic'은 화풍 연출 키워드로 손 모양 오류 수정과는 관련이 없습니다." },
+        { qNum: 23, type: "mc", title: "제미나이 응답 형태가 중괄호 { } 및 키-값 쌍 형태로 출력되었을 때 지정한 출력 포맷은?", options: ["HTML", "XML", "JSON", "CSV"], ans: "3", exp: "중괄호 형태의 키-값 데이터 구조는 JSON 포맷입니다." },
+        { qNum: 24, type: "mc", title: "확장프로그램을 사용하여 사업계획서를 만드는 올바른 순서를 고르시오.", subtext: "[ㄱ.SlidesAI 입력 / ㄴ.AIPRM으로 내용 생성 / ㄷ.내용 구체화 / ㄹ.생성된 슬라이드 구체화]", options: ["ㄴ -> ㄷ -> ㄱ -> ㄹ", "ㄴ -> ㄱ -> ㄷ -> ㄹ", "ㄴ -> ㄷ -> ㄹ -> ㄱ", "ㄱ -> ㄴ -> ㄷ -> ㄹ"], ans: "1", exp: "내용 생성(ㄴ) -> 구체화(ㄷ) -> SlidesAI 입력(ㄱ) -> 슬라이드 구체화(ㄹ) 순서가 올바릅니다." },
+        { qNum: 25, type: "mc", title: "다음 챗GPT 소스 코드(class WaterBill, def calculate 등)에서 사용된 프로그래밍 언어는?", options: ["C언어", "자바(JAVA)", "파이썬(Python)", "C++"], ans: "3", exp: "class, def, f-string 구문 어법을 사용하는 언어는 파이썬(Python)입니다." },
+        { qNum: 26, type: "mc", title: "챗GPT가 역방향 쉘(Reverse Shell) 위험성이 있다고 경고했을 때 취할 조치로 적절하지 않은 것은?", options: ["IP 주소 192.168.56.1 연동 차단", "포트 번호 443은 보안연결이므로 안전하다고 판단하고 방치한다.", "파이썬 스크립트 실행 권한 제거", "네트워크 차단 및 프로세스 종료"], ans: "2", exp: "443 포트라도 악성 스크립트의 위장 통신일 수 있으므로 방치하면 안 됩니다." },
+        { qNum: 27, type: "mc", title: "챗GPT 프롬프트 설정 중 'Cynical(냉소적인)' 어조와 분위기를 지정하기 위해 사용된 속성 명칭은?", options: ["쓰기 스타일(Writing Style)", "출현 스타일", "빈도 스타일", "반복 스타일"], ans: "1", exp: "어조 및 답변 글 스타일에 관한 설정은 쓰기 스타일(Writing Style)입니다." },
+        { qNum: 28, type: "mc", title: "OpenAI 파이썬 API 호출 소스 코드 보기에서 알 수 없는 올바른 사실은?", options: ["API 키를 설정하지 않아도 챗GPT가 응답한다.", "여행계획 요청 문장을 변수에 저장했다.", "질의할 프롬프트를 출력한다.", "GPT o1 모델을 사용하도록 지정했다."], ans: "1", exp: "OpenAI API 호출 시 유효한 api_key 설정이 필수적입니다." },
+        { qNum: 29, type: "mc", title: "챗GPT 프롬프트에서 적용되지 않은 기법은?", subtext: "[프롬프트] 너는 초보 프로그래머야(역할)... 단계적으로 생각해서 말해줘(CoT)... 파일 다운로드 가능하게 생성해줘(형식)", options: ["역할 부여", "하이퍼파라미터", "설명 요구", "응답 요약"], ans: "4", exp: "해당 프롬프트에는 응답 요약(Summarization) 지시가 포함되어 있지 않습니다." },
+        { qNum: 30, type: "mc", title: "인코더 공격과 확산 방식을 적용하여 생성 AI가 작가의 이미지를 무단 합성하는 것을 방지하는 기술은?", options: ["글레이즈(Glaze)", "포토가드(PhotoGuard)", "적대적 생성 신경망", "코파일럿"], ans: "2", exp: "이미지 무단 편집 및 왜곡 방지 대표 기술은 PhotoGuard입니다." },
+        { qNum: 31, type: "mc", title: "다음 중 생성 AI 사용으로 발생할 수 있는 위험 요소에 해당하는 올바른 항목은?", options: ["AI 학습에 활용된 데이터에 개인정보가 포함되어 유출되는 경우", "허가받은 소스코드를 학습에 사용", "번역 요청 기능 활용", "회사 생산성을 증대시킨 경우"], ans: "1", exp: "학습 데이터 내 개인정보(PII) 노출 및 유출은 대표적인 위험 요소입니다." },
+        { qNum: 32, type: "mc", title: "다음 중 생성 AI 산출물의 저작권 등록 법적 기준과 관련하여 올바른 설명을 고르시오.", options: ["인간의 창작적 개입이 없는 AI 산출물도 저작권 등록 가능", "AI 개발자 명의로 등록 가능", "인간의 창작적 기여가 없는 AI 산출물에 대한 저작권 등록은 불가능", "사소한 변경만으로 저작권 즉시 인정"], ans: "3", exp: "인간의 창작적 기여가 없는 단순 AI 생성물은 저작권 등록이 불가능합니다." },
+        { qNum: 33, type: "mc", title: "다음 중 프롬프트 엔지니어가 지켜야 할 윤리 원칙으로 적절하지 않은 것을 고르시오.", options: ["편향된 정보를 프롬프트에 제공하지 않는다.", "콘텐츠 출처와 한계를 알린다.", "사용자에게 내부 원천 코드 및 알고리즘을 100% 무조건 투명하게 전면 공개해야 한다.", "개인정보와 민감 정보를 노출하지 않는다."], ans: "3", exp: "알고리즘 전체 소스코드를 무조건 전면 공개해야 하는 의무는 윤리 원칙에 해당하지 않습니다." },
+        { qNum: 34, type: "mc", title: "이미지 픽셀을 미세하게 왜곡시켜 인간 눈에는 보이지 않지만 AI의 무단 변형을 방지하는 시스템 기술은?", options: ["글레이즈(Glaze)", "포토가드(PhotoGuard)", "적대적 생성 신경망", "안티가드"], ans: "2", exp: "미세 픽셀 왜곡으로 AI의 왜곡 합성을 차단하는 방어 기술은 PhotoGuard입니다." },
+        { qNum: 35, type: "subjective", title: "다음 보기는 텍스트 데이터의 출현 빈도에 따라 단어의 크기를 다르게 시각화하는 시각화 도구의 명칭을 쓰시오. (단답형)", ans: "워드클라우드", altAns: ["Word Cloud", "Wordcloud", "워드 클라우드"], exp: "키워드의 빈도수를 글자 크기로 시각화하는 도구는 '워드클라우드(Word Cloud)'입니다." },
+        { qNum: 36, type: "subjective", title: "[36~40 복합] 제시문 A의 ①에 들어갈 용어를 보기에서 골라 쓰시오.", subtext: "[보기: 단축어 / #키워드3개 / 업로드 / OK / #요약묘사]", ans: "단축어", exp: "길고 복잡한 프롬프트를 묶어 호출하는 용어는 '단축어'입니다." },
+        { qNum: 37, type: "subjective", title: "[36~40 복합] 제시문 A의 ②에 들어갈 수치/조건을 보기에서 골라 쓰시오.", subtext: "[#키워드3개 정의: 업로드 한 이미지 중 핵심 키워드(②)만 응답하기]", ans: "3개", exp: "#키워드3개 정의에 맞는 수치인 '3개'가 정답입니다." },
+        { qNum: 38, type: "subjective", title: "[36~40 복합] 제시문 A의 ③에 들어갈 동작 지시어를 보기에서 골라 쓰시오.", subtext: "[프롬프트: 정의한 단축어와 제시하는 이미지를 (③) 하면 사전 정의된 Prompt를 따라 답변해줘.]", ans: "업로드", exp: "이미지 파일을 첨부하는 지시어는 '업로드'입니다." },
+        { qNum: 39, type: "subjective", title: "[36~40 복합] 제시문 A의 ④에 들어갈 확인 응답어를 보기에서 골라 쓰시오.", subtext: "[프롬프트: 내용을 이해했으면 '(④)'라고 답하고 이후 규칙을 따라줘.]", ans: "OK", exp: "규칙 학습을 확인하는 문자열 응답은 'OK'입니다." },
+        { qNum: 40, type: "subjective", title: "[36~40 복합] 제시문 B의 ⑤에 들어갈 호출 단축어를 보기에서 골라 쓰시오.", subtext: "[결과: 화려한 일몰 하늘 아래 다채로운 꽃밭 속 웅장한 나무가 있는 풍경입니다. (50자 내외 요약 묘사)]", ans: "#요약묘사", exp: "50자 내외 요약 묘사 호출 단축어는 '#요약묘사'입니다." }
+    ];
+
+    const userAnswers = {};
+
+    // 화면 렌더링 함수
+    function renderExam() {
+        const form = document.getElementById('exam-form');
+        const omrGrid = document.getElementById('omr-grid');
+        
+        form.innerHTML = '';
+        omrGrid.innerHTML = '';
+
+        examQuestions.forEach(q => {
+            const qNum = q.qNum;
+
+            // 1. 문제 카드 렌더링
+            const card = document.createElement('div');
+            card.id = `q-card-${qNum}`;
+            card.className = "question-card";
+
+            let inputHtml = "";
+            if (q.type === "mc") {
+                inputHtml = `<div class="options-grid">` +
+                    q.options.map((opt, oIdx) => `
+                        <label class="option-label">
+                            <input type="radio" name="q_${qNum}" value="${oIdx + 1}" onchange="markOMR(${qNum}, '${oIdx + 1}')">
+                            <span><strong>${oIdx + 1}.</strong> ${opt}</span>
+                        </label>
+                    `).join('') + `</div>`;
+            } else {
+                inputHtml = `
+                    <div style="margin-top: 10px;">
+                        <label style="font-size: 12px; font-weight: 700; color: #78716c; display: block; margin-bottom: 5px;">주관식 답안 입력:</label>
+                        <input type="text" id="input_q_${qNum}" oninput="markOMR(${qNum}, this.value)" placeholder="정답 단어를 정확히 입력하세요" class="text-input">
+                    </div>
+                `;
+            }
+
+            let subtextHtml = q.subtext ? `<span class="q-subtext">${q.subtext}</span>` : "";
+
+            card.innerHTML = `
+                <div class="q-header">
+                    <span class="q-num">문항 ${qNum} / 40</span>
+                    <span class="q-type">${q.type === 'mc' ? '객관식 4택1' : '단답형 주관식'}</span>
+                </div>
+                <h3 class="q-title">${q.title}</h3>
+                ${subtextHtml}
+                ${inputHtml}
+                <div id="exp-q-${qNum}" class="explanation-box">
+                    <div class="exp-answer">정답: <span id="ans-text-${qNum}"></span></div>
+                    <div><strong>해설:</strong> ${q.exp}</div>
+                </div>
+            `;
+            form.appendChild(card);
+
+            // 2. OMR 그리드 버튼 렌더링
+            const omrBtn = document.createElement('button');
+            omrBtn.type = "button";
+            omrBtn.id = `omr-btn-${qNum}`;
+            omrBtn.onclick = () => scrollToQuestion(qNum);
+            omrBtn.className = "omr-btn";
+            omrBtn.innerText = qNum;
+            omrGrid.appendChild(omrBtn);
+        });
+    }
+
+    // 답안 표기 저장 함수
+    function markOMR(qNum, val) {
+        if (val && val.trim() !== "") {
+            userAnswers[qNum] = val.trim();
+            const btn = document.getElementById(`omr-btn-${qNum}`);
+            btn.className = "omr-btn active";
+        } else {
+            delete userAnswers[qNum];
+            const btn = document.getElementById(`omr-btn-${qNum}`);
+            btn.className = "omr-btn";
+        }
+        updateAnsweredCounter();
+    }
+
+    function updateAnsweredCounter() {
+        const count = Object.keys(userAnswers).length;
+        document.getElementById('answered-counter').innerText = `${count} / 40 작성`;
+    }
+
+    function scrollToQuestion(qNum) {
+        const card = document.getElementById(`q-card-${qNum}`);
+        card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+
+    // 60분 타이머 카운트다운
+    let timeLeft = 60 * 60;
+    const timerDisplay = document.getElementById('timer-display');
+    const timerInterval = setInterval(() => {
+        if (timeLeft <= 0) {
+            clearInterval(timerInterval);
+            alert("시험 제한 시간이 종료되었습니다. 자동으로 제출 및 채점이 완료됩니다.");
+            submitExam();
+            return;
+        }
+        timeLeft--;
+        const m = Math.floor(timeLeft / 60);
+        const s = timeLeft % 60;
+        timerDisplay.innerText = `${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`;
+    }, 1000);
+
+    // 채점 실행 및 오답노트 오픈
+    function submitExam() {
+        let correctCount = 0;
+        const totalQuestions = examQuestions.length;
+
+        examQuestions.forEach(q => {
+            const qNum = q.qNum;
+            const userVal = userAnswers[qNum];
+            const card = document.getElementById(`q-card-${qNum}`);
+            const expBox = document.getElementById(`exp-q-${qNum}`);
+            const ansText = document.getElementById(`ans-text-${qNum}`);
+
+            expBox.style.display = 'block';
+
+            let isCorrect = false;
+
+            if (q.type === 'mc') {
+                ansText.innerText = `${q.ans}번 (${q.options[parseInt(q.ans) - 1]})`;
+                if (userVal === q.ans) isCorrect = true;
+            } else {
+                let correctAnswers = [q.ans];
+                if (q.altAns) correctAnswers = correctAnswers.concat(q.altAns);
+                ansText.innerText = correctAnswers.join(' 또는 ');
+
+                if (userVal && correctAnswers.some(ans => ans.toLowerCase().replace(/\s+/g, '') === userVal.toLowerCase().replace(/\s+/g, ''))) {
+                    isCorrect = true;
+                }
+            }
+
+            if (isCorrect) {
+                correctCount++;
+                card.style.borderColor = '#22c55e';
+                card.style.borderWidth = '2px';
+            } else {
+                card.style.borderColor = '#ef4444';
+                card.style.borderWidth = '2px';
+            }
+        });
+
+        const score = Math.round((correctCount / totalQuestions) * 100);
+        const report = document.getElementById('result-report');
+        const totalScoreEl = document.getElementById('total-score');
+        const correctCountEl = document.getElementById('correct-count');
+        const passBadge = document.getElementById('pass-badge');
+
+        report.style.display = 'block';
+        totalScoreEl.innerText = `${score}점`;
+        correctCountEl.innerText = `${correctCount} / ${totalQuestions}`;
+
+        if (score >= 70) {
+            passBadge.innerText = "합격 (PASS)";
+            passBadge.className = "pass-badge pass";
+        } else {
+            passBadge.innerText = "불합격 (FAIL)";
+            passBadge.className = "pass-badge fail";
+        }
+
+        report.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    window.onload = renderExam;
+</script>
+
+</body>
+</html>

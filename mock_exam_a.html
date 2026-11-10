@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 프롬프트활용능력 2급 A형 실전 CBT 모의고사 | 무료 기출 문제풀이</title>
+    <meta name="description" content="KPC AI 프롬프트활용능력 2급 자격시험 A형 기출 40문항 완벽 반영 실전 CBT 시뮬레이터 및 상세 해설 제공">
+         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2888840483385554"
+     crossorigin="anonymous"></script>
+    <link rel="canonical" href="https://misopick.kr/mock_exam_a.html">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Pretendard:wght@400;500;600;700;800&display=swap');
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif; background-color: #FAF8F5; color: #2D2A26; min-height: 100vh; display: flex; flex-direction: column; line-height: 1.5; }
+        
+        /* 고품격 상단 네비게이션 헤더 */
+        header { background-color: #ffffff; border-bottom: 1px solid #EFECE6; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 6px rgba(0,0,0,0.03); }
+        .header-inner { max-width: 1280px; margin: 0 auto; padding: 14px 24px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+        .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; color: #2D2A26; font-weight: 700; font-size: 18px; }
+        .logo-badge { background-color: #EA580C; color: #ffffff; font-size: 11px; padding: 4px 8px; border-radius: 6px; font-weight: 700; }
+        nav { display: flex; align-items: center; gap: 20px; }
+        nav a { color: #6B655D; text-decoration: none; font-size: 14px; font-weight: 500; transition: color 0.15s; }
+        nav a:hover, nav a.active { color: #EA580C; font-weight: 700; }
+
+        /* 서브 타이머 및 액션 바 */
+        .header-timer-bar { background-color: #FFF7ED; border-top: 1px solid #FFEDD5; border-bottom: 1px solid #FED7AA; }
+        .header-timer-container { max-width: 1280px; margin: 0 auto; padding: 10px 24px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+        .exam-title-badge { font-size: 15px; font-weight: 700; color: #7C2D12; display: flex; align-items: center; gap: 8px; }
+        .timer-box { display: flex; align-items: center; gap: 8px; background: #ffffff; padding: 6px 14px; border-radius: 8px; border: 1px solid #FED7AA; }
+        .timer-label { font-size: 12px; color: #C2410C; font-weight: 700; }
+        .timer-val { font-family: monospace; font-weight: 700; color: #C2410C; font-size: 16px; }
+        .btn-submit { background-color: #EA580C; color: #ffffff; font-size: 13px; font-weight: 600; padding: 8px 18px; border-radius: 8px; border: none; cursor: pointer; transition: background 0.2s; box-shadow: 0 1px 2px rgba(234,88,12,0.2); }
+        .btn-submit:hover { background-color: #C2410C; }
+
+        /* 구글 애드센스 광고 반응형 영역 */
+        .adsense-container { width: 100%; max-width: 1280px; margin: 20px auto 0 auto; padding: 0 16px; text-align: center; }
+        .adsense-wrapper { background-color: #ffffff; border: 1px solid #EFECE6; border-radius: 14px; padding: 12px; min-height: 100px; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.02); }
+
+        /* 메인 CBT 레이아웃 */
+        main { max-width: 1280px; margin: 0 auto; padding: 24px 16px; flex: 1; width: 100%; display: grid; grid-template-columns: 1fr; gap: 24px; }
+        @media(min-width: 1024px) { main { grid-template-columns: repeat(12, 1fr); } }
+
+        .question-panel { grid-column: span 8; background: #ffffff; border: 1px solid #EFECE6; border-radius: 20px; padding: 28px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 2px 8px rgba(0,0,0,0.02); min-height: 540px; }
+        .omr-panel { grid-column: span 4; background: #ffffff; border: 1px solid #EFECE6; border-radius: 20px; padding: 20px; display: flex; flex-direction: column; max-height: calc(100vh - 160px); position: sticky; top: 130px; box-shadow: 0 2px 8px rgba(0,0,0,0.02); }
+
+        .question-header { display: flex; align-items: center; gap: 10px; margin-bottom: 16px; }
+        .q-badge { background-color: #EA580C; color: #ffffff; font-weight: 700; font-size: 12px; padding: 4px 12px; border-radius: 9999px; }
+        .q-type { font-size: 13px; color: #7A7369; font-weight: 500; }
+        .q-text { font-size: 16px; font-weight: 700; color: #2D2A26; line-height: 1.6; white-space: pre-line; margin-bottom: 24px; }
+
+        .options-list { display: flex; flex-direction: column; gap: 10px; margin-bottom: 24px; }
+        .option-item { display: flex; align-items: center; padding: 14px 18px; border-radius: 12px; border: 1px solid #EFECE6; background-color: #FAF8F5; cursor: pointer; transition: all 0.15s ease; }
+        .option-item:hover { background-color: #F4F1EA; border-color: #D9D4C7; }
+        .option-item.selected { background-color: #FFF7ED; border-color: #FDBA74; font-weight: 700; color: #7C2D12; }
+        .option-num { width: 26px; height: 26px; border-radius: 50%; border: 1px solid #D9D4C7; display: flex; align-items: center; justify-content: center; font-size: 12px; margin-right: 12px; color: #7A7369; flex-shrink: 0; background-color: #ffffff; }
+        .option-item.selected .option-num { background-color: #EA580C; border-color: #EA580C; color: #ffffff; }
+
+        .text-input { width: 100%; padding: 14px 16px; border-radius: 12px; background-color: #FAF8F5; border: 1px solid #EFECE6; font-size: 15px; outline: none; transition: border 0.15s; }
+        .text-input:focus { border-color: #EA580C; background-color: #ffffff; }
+
+        .nav-footer { display: flex; align-items: center; justify-content: space-between; border-top: 1px solid #EFECE6; padding-top: 20px; margin-top: auto; }
+        .btn-nav { background-color: #FAF8F5; border: 1px solid #EFECE6; color: #2D2A26; font-size: 13px; font-weight: 600; padding: 10px 18px; border-radius: 10px; cursor: pointer; transition: background 0.15s; }
+        .btn-nav:hover { background-color: #F4F1EA; }
+        .btn-nav.primary { background-color: #EA580C; border-color: #EA580C; color: #ffffff; }
+        .btn-nav.primary:hover { background-color: #C2410C; }
+        .progress-text { font-size: 13px; font-weight: 700; color: #7A7369; }
+
+        .omr-header { border-bottom: 1px solid #EFECE6; padding-bottom: 12px; margin-bottom: 12px; display: flex; justify-content: space-between; align-items: center; }
+        .omr-title { font-weight: 700; font-size: 15px; color: #2D2A26; }
+        .omr-count { font-size: 12px; color: #7A7369; }
+        .omr-count span { font-weight: 700; color: #EA580C; }
+
+        .omr-grid { flex: 1; overflow-y: auto; display: flex; flex-direction: column; gap: 8px; padding-right: 4px; }
+        .omr-item { padding: 10px 14px; border-radius: 10px; border: 1px solid #EFECE6; background-color: #FAF8F5; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-size: 13px; transition: background 0.15s; }
+        .omr-item:hover { background-color: #F4F1EA; }
+        .omr-item.active { border-color: #EA580C; background-color: #FFF7ED; font-weight: 700; }
+        .omr-item-num { font-weight: 700; color: #2D2A26; }
+        .omr-item-val { color: #7A7369; font-weight: 600; }
+        .omr-item-val.filled { color: #EA580C; font-weight: 700; }
+
+        /* 결과 모달창 */
+        .modal-bg { position: fixed; inset: 0; background: rgba(0,0,0,0.5); backdrop-filter: blur(4px); z-index: 200; display: flex; align-items: center; justify-content: center; padding: 16px; }
+        .modal-bg.hidden { display: none; }
+        .modal-box { background: #ffffff; border: 1px solid #EFECE6; border-radius: 20px; padding: 28px; max-width: 520px; width: 100%; box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); display: flex; flex-direction: column; gap: 20px; max-height: 90vh; overflow-y: auto; }
+        .modal-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; background: #FAF8F5; padding: 16px; border-radius: 14px; border: 1px solid #EFECE6; text-align: center; }
+        .stat-label { font-size: 12px; color: #7A7369; margin-bottom: 4px; display: block; }
+        .stat-val { font-size: 22px; font-weight: 900; }
+
+        /* 커스텀 스크롤바 */
+        .custom-scrollbar::-webkit-scrollbar { width: 6px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: #FAF8F5; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #D9D4C7; border-radius: 3px; }
+
+        /* 애드센스 필수 링크 포함 푸터 */
+        footer { background-color: #ffffff; border-top: 1px solid #EFECE6; padding: 36px 20px; text-align: center; font-size: 13px; color: #78716C; margin-top: 40px; }
+        .footer-links { margin-bottom: 12px; display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; }
+        .footer-links a { color: #57534E; text-decoration: none; font-weight: 500; transition: color 0.15s; }
+        .footer-links a:hover { color: #EA580C; text-decoration: underline; }
+    </style>
+</head>
+<body>
+
+    <!-- 상단 통합 네비게이션 헤더 -->
+    <header>
+        <div class="header-inner">
+            <a href="index.html" class="logo">
+                <span class="logo-badge">KPC AI-POT</span>
+                <span>AI 프롬프트활용능력 2급 포털</span>
+            </a>
+            <nav>
+                <a href="index.html">홈</a>            
+                <a href="ch1_cbt.html">모의고사 바로가기</a>
+                <a href="mock_exam_b.html" class="active">오픈기출문제 B형 바로가기   </a>
+            </nav>
+        </div>
+        <div class="header-timer-bar">
+            <div class="header-timer-container">
+                <div class="exam-title-badge">
+                    <span>📝</span> AI 프롬프트활용능력 2급 - A형 실전 모의고사
+                </div>
+                <div style="display: flex; align-items: center; gap: 16px;">
+                    <div class="timer-box">
+                        <span class="timer-label">남은 시간</span>
+                        <span id="timer" class="timer-val">60:00</span>
+                    </div>
+                    <button onclick="submitExam()" class="btn-submit">답안 제출하기</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 구글 애드센스 상단 광고 영역 -->
+    <div class="adsense-container">
+        <div class="adsense-wrapper">
+            <!-- Google AdSense Code (본인 애드센스 코드로 교체하세요) -->
+            <ins class="adsbygoogle"
+                 style="display:block; width:100%; height:90px;"
+                 data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+                 data-ad-slot="1234567890"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+    </div>
+
+    <!-- 메인 CBT 시험 환경 -->
+    <main>
+        <section class="question-panel">
+            <div id="question-container"></div>
+            <div class="nav-footer">
+                <button id="prev-btn" onclick="navigateQuestion(-1)" class="btn-nav">← 이전 문제</button>
+                <span id="question-progress" class="progress-text">문항 1 / 40</span>
+                <button id="next-btn" onclick="navigateQuestion(1)" class="btn-nav primary">다음 문제 →</button>
+            </div>
+        </section>
+
+        <aside class="omr-panel">
+            <div class="omr-header">
+                <h2 class="omr-title">OMR 답안지</h2>
+                <div class="omr-count">표기: <span id="answered-count">0</span> / 40</div>
+            </div>
+            <div id="omr-grid" class="omr-grid custom-scrollbar"></div>
+            <div style="padding-top: 12px; border-top: 1px solid #EFECE6; margin-top: 12px;">
+                <button onclick="submitExam()" style="width: 100%; background: #EA580C; color: #ffffff; border: none; padding: 12px; border-radius: 10px; font-weight: 700; font-size: 13px; cursor: pointer;">시험 종료 및 최종 채점</button>
+            </div>
+        </aside>
+    </main>
+
+    <!-- 구글 애드센스 하단 광고 영역 -->
+    <div class="adsense-container" style="margin-bottom: 24px;">
+        <div class="adsense-wrapper">
+            <!-- Google AdSense Code (본인 애드센스 코드로 교체하세요) -->
+            <ins class="adsbygoogle"
+                 style="display:block; width:100%; height:90px;"
+                 data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+                 data-ad-slot="0987654321"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+    </div>
+
+    <!-- 채점 결과 및 오답 노트 모달 -->
+    <div id="result-modal" class="modal-bg hidden">
+        <div class="modal-box custom-scrollbar">
+            <div style="text-align: center;">
+                <span id="pass-badge" style="display: inline-block; font-size: 12px; font-weight: 700; padding: 4px 14px; border-radius: 9999px; margin-bottom: 8px;"></span>
+                <h2 style="font-size: 20px; font-weight: 800; color: #2D2A26;">실전 모의고사 채점 결과</h2>
+                <p style="font-size: 13px; color: #7A7369; margin-top: 4px;">KPC AI-POT 2급 합격 기준: 100점 만점 중 70점 이상</p>
+            </div>
+            <div class="modal-stats">
+                <div>
+                    <span class="stat-label">최종 점수</span>
+                    <span id="score-text" class="stat-val" style="color: #EA580C;">0점</span>
+                </div>
+                <div>
+                    <span class="stat-label">정답 수</span>
+                    <span id="correct-count" class="stat-val" style="color: #059669;">0개</span>
+                </div>
+                <div>
+                    <span class="stat-label">오답 수</span>
+                    <span id="wrong-count" class="stat-val" style="color: #DC2626;">0개</span>
+                </div>
+            </div>
+            <button onclick="reviewModalClose()" style="width: 100%; background: #EA580C; color: #ffffff; border: none; padding: 14px; border-radius: 12px; font-weight: 700; font-size: 14px; cursor: pointer;">오답 노트 및 해설 확인하기</button>
+        </div>
+    </div>
+
+    <!-- 푸터 (애드센스 필수 승인 요건: 개인정보처리방침, 이용약관 포함) -->
+    <footer>
+        <div class="footer-links">
+            <a href="index.html">홈</a>
+            <a href="privacy.html">개인정보처리방침</a>
+            <a href="terms.html">이용약관</a>
+                   </div>
+        <p>© 2026 AI-POT Study Portal. All rights reserved.</p>
+    </footer>
+
+    <!-- CBT 시뮬레이터 로직 스크립트 -->
+    <script>
+        const examQuestions = [
+            { id: 1, type: "choice", q: "다음에서 설명하는 인공지능의 활용 분야를 고르시오.\n[설명] 신용 평가, 사기 탐지, 자동화된 트레이딩 시스템에서 사용되어 의사결정을 빠르고 정확하게 판단", options: ["의료 분야", "유통 분야", "금융 분야", "교통 분야"], ans: 3, exp: "신용 평가, 사기 탐지, 자동화 트레이딩은 대표적인 금융 분야 AI 활용 사례입니다." },
+            { id: 2, type: "choice", q: "다음 중 인공지능 시스템의 성능을 결정짓는 주요 요소를 고르시오.", options: ["편향된 학습 데이터", "저작권이 확보된 데이터", "윤리적 측면이 고려된 데이터", "대량의 고품질 데이터"], ans: 4, exp: "인공지능 성능에는 대량의 고품질 데이터(High-quality data) 확보가 가장 핵심적입니다." },
+            { id: 3, type: "choice", q: "다음 보기에서 (ㄱ), (ㄴ)에 들어갈 머신러닝 학습 상태 모델링 용어로 적합한 것을 고르시오.\n(좌측 그래프: 완만하고 적절한 곡선 / 우측 그래프: 심하게 굴곡진 곡선)", options: ["과적합(Overfitting) / 최적합(Bestfitting)", "최적합(Bestfitting) / 과소적합(Underfitting)", "과소적합(Underfitting) / 과적합(Overfitting)", "과적합(Overfitting) / 과적합(Overfitting)"], ans: 3, exp: "좌측은 단순하여 성능이 떨어지는 과소적합(Underfitting), 우측은 노이즈까지 지나치게 학습한 과적합(Overfitting)입니다." },
+            { id: 4, type: "choice", q: "다음 보기에서 설명하고 있는 알고리즘을 고르시오.\n- 결정 과정이 복잡한 문제, 특히 전략 게임에서 최적의 결정을 찾기 위하여 사용되는 알고리즘\n- 바둑에서 알파고(AlphaGo)에 사용됨", options: ["Q-학습(Q-Learning)", "인공신경망(ANN)", "몬테카를로 트리 검색(MCTS)", "탐욕 알고리즘(Greedy Algorithm)"], ans: 3, exp: "바둑 등 복잡한 수읽기에 활용된 알고리즘은 몬테카를로 트리 검색(MCTS)입니다." },
+            { id: 5, type: "choice", q: "다음 중 생성 AI의 장점으로 옳지 않은 것을 고르시오.", options: ["개인화 및 맞춤화 서비스 제공이 가능하다.", "보안 위험과 법적 위험성이 있다.", "직원의 생산성이 향상된다.", "창의적인 콘텐츠를 생성할 수 있다."], ans: 2, exp: "보안 및 법적 위험성은 장점이 아니라 생성 AI가 안고 있는 대표적인 역기능 및 리스크 요인입니다." },
+            { id: 6, type: "choice", q: "다음 중 자연어 처리의 특징으로 옳지 않은 것을 고르시오.", options: ["인간의 언어를 컴퓨터가 해석하고 이해할 수 있다.", "컴퓨터가 해석한 데이터를 토대로 새로운 문장을 생성한다.", "인간이 작성한 텍스트에서 감정을 식별하기 어렵다.", "단어 또는 문장이 사용된 문맥을 파악하여 의미를 추론한다."], ans: 3, exp: "감성 분석(Sentiment Analysis)을 통해 텍스트에서 인간의 감정 식별이 가능합니다." },
+            { id: 7, type: "choice", q: "다음 보기에서 LLM의 구성 단어 조합으로 옳은 것을 고르시오.\nㄱ. Large(거대) ㄴ. Limitless ㄷ. Linguistics ㄹ. Language(언어) ㅁ. Model(모델) ㅂ. Module", options: ["ㄱ, ㄴ, ㅁ", "ㄴ, ㄹ, ㅁ", "ㄱ, ㄹ, ㅁ", "ㄴ, ㄹ, ㅂ"], ans: 3, exp: "Large Language Model의 약자로 ㄱ, ㄹ, ㅁ이 조합됩니다." },
+            { id: 8, type: "choice", q: "챗GPT의 효과적인 사용을 위한 질의 규칙 설명 중 적절하지 않은 것을 고르시오.", options: ["질문의 범위를 한정하고, 구체적인 정보를 요청해야 함", "정확한 답변을 얻기 위해 최신 정보를 명시해야 함", "질문 범주를 제한하면 정확한 답변을 얻을 수 없음", "질문에 필요한 배경정보를 제공하면 더 정확한 답변이 가능"], ans: 3, exp: "질문 범주와 범위를 적절히 제한해야 AI가 핵심을 파악하고 정확한 답변을 제공합니다." },
+            { id: 9, type: "choice", q: "다음 보기에서 설명하는 기법을 고르시오.\n- 자연어 문장을 의미 단위의 프로그램 코드로 변환하는 과정", options: ["의미 파싱(Semantic Parsing)", "의미 함축(Semantic Entailment)", "구문 분석(Parsing)", "텍스트 함축"], ans: 1, exp: "문장을 의미 단위의 프로그램 명령/코드로 변환하는 것은 의미 파싱(Semantic Parsing)입니다." },
+            { id: 10, type: "choice", q: "다음 중 제미나이(Gemini)의 특징으로 올바르지 않은 것을 고르시오.", options: ["거대 멀티모달 모델(LMM)이다.", "바드(Bard)에서 명칭이 바뀌었다.", "텍스트, 그림, 영상, 소리 등을 입력할 수 있다.", "검색엔진 데이터를 사용하지 않는다."], ans: 4, exp: "구글 검색엔진 데이터 및 실시간 웹 검색 기능을 적극적으로 연동하여 활용합니다." },
+            { id: 11, type: "choice", q: "다음 중 프롬프트의 구성요소로 적절하지 않은 것을 고르시오.", options: ["지시(Instruction)", "제한(Limit)", "맥락 정보(Context)", "입력 데이터(Input Data)"], ans: 2, exp: "프롬프트 4대 요소는 지시(Instruction), 맥락(Context), 입력 데이터(Input Data), 출력 형식입니다." },
+            { id: 12, type: "choice", q: "미드저니에서 가로세로 비율 변경 및 이미지 변형 생성을 위한 파라미터 조합으로 옳은 것은?", options: ["--stylize 750, --tile", "--ar 16:9, --chaos 35", "--repeat, --chaos 35", "--ar 9:16, --no"], ans: 2, exp: "비율 지정은 --ar, 자유도 부여는 --chaos 파라미터를 사용합니다." },
+            { id: 13, type: "choice", q: "챗GPT 프롬프트에서 창의성을 제어하기 위해 설정하는 하이퍼파라미터는?", options: ["Top-p", "model", "presence_penalty", "Temperature"], ans: 4, exp: "출력의 무작위성과 창의성을 조절하는 대표 파라미터는 Temperature입니다." },
+            { id: 14, type: "choice", q: "다음에서 설명하는 프롬프트 엔지니어링 방법을 고르시오.\n- 챗GPT 메시지 창에 이미지를 업로드하고 프롬프트를 작성하여 분석 수행", options: ["멀티모달 프롬프트", "음성인식 프롬프트", "다국어 지원 프롬프트", "파일 분석 프롬프트"], ans: 1, exp: "이미지와 텍스트를 함께 입력하여 처리하는 방식은 멀티모달 프롬프트입니다." },
+            { id: 15, type: "choice", q: "인공지능 분야에서 '언어 모델 기반 생성 AI를 작동시키기 위해 이용자가 입력하는 입력값'을 뜻하는 용어는?", options: ["지시(Instruction)", "명령어(Command)", "스크립트(Script)", "프롬프트(Prompt)"], ans: 4, exp: "사용자가 생성 AI에 입력하는 지시 명령어 집합은 프롬프트(Prompt)입니다." },
+            { id: 16, type: "choice", q: "자연어 분석 시 단계별 자연어 처리 기술에 대한 설명 중 올바르지 않은 것은?", options: ["단어 분리는 문장을 단어 단위로 분리", "형태소 분석은 형태소별 의미 파악", "구문 분석은 단어의 다의성 문제를 해결하기 위해 문맥을 고려하는 기법이다.", "품사 태깅은 품사를 지정하는 작업"], ans: 3, exp: "다의성 해결 및 문맥 고려는 어휘 의미 분석(Word Sense Disambiguation) 등의 영역입니다." },
+            { id: 17, type: "choice", q: "기계 학습에서 모델을 특정한 작업이나 데이터셋에 맞게 조정하는 과정을 뜻하는 용어는?", options: ["군집화", "미세 조정(Fine-tuning)", "사전 학습", "교차 검증"], ans: 2, exp: "특정 태스크 최적화를 위해 가중치를 추가 조정하는 과정은 미세 조정(Fine-tuning)입니다." },
+            { id: 18, type: "choice", q: "챗GPT의 효과적 사용을 위한 질의 규칙 설명으로 적절하지 않은 것은?", options: ["배경 정보 제공 시 정확도 향상", "목적과 의도를 명확히 표현", "다양한 답변을 위해 범위를 제한하지 않고 물어봐야 함", "최신 정보 한계 극복을 위해 연도 등 명시"], ans: 3, exp: "질문의 범위를 구체적으로 한정해야 양질의 정확한 답변을 얻을 수 있습니다." },
+            { id: 19, type: "choice", q: "이미지 분석 후 영문 키워드와 한글 번역을 출력하도록 요청하는 챗GPT 응답 결과 포맷으로 옳은 것은?", options: ["영문: ... / 한글: ...", "영어: Sunset, Blossoming Tree, Colorful Flowers \n 한글: 선셋, 꽃이 피는 나무, 다채로운 꽃들", "영문: {바다} ...", "영어: {꽃이름} ..."], ans: 2, exp: "구체적 영문 키워드와 한글 대응 번역 출력 결과형태입니다." },
+            { id: 20, type: "choice", q: "프롬프트 내에서 챗GPT에게 문맥 정보를 제공하기 위해 사용한 대표적인 문장 부호는?", options: ["큰따옴표(\")", "작은따옴표(')", "샵(#)", "중괄호({})"], ans: 1, exp: "문맥이나 본문 데이터를 구분하기 위해 큰따옴표나 구분 기호를 활용합니다." },
+            { id: 21, type: "choice", q: "감정 분석 프롬프트 및 챗GPT 응답 결과와 관련하여 옳지 않은 설명은?", options: ["감정 분석을 위한 예시 작성", "예시에서 긍/부정 이유 설명", "출력 형식 지정", "예시는 긍정/부정 분류"], ans: 2, exp: "제시된 프롬프트는 이유 설명보다는 분류 예시(Few-shot) 형태로 구성되어 있습니다." },
+            { id: 22, type: "choice", q: "스테이블 디퓨전 설정값(Checkpoint, Steps=60, Width=540, Height=960, Batch=4, Seed=-1)에서 알 수 있는 사실은?", options: ["기본 모델 사용", "매번 동일 이미지 생성", "한 번에 4개의 이미지 생성", "가로 960, 세로 540 픽셀"], ans: 3, exp: "Batch size가 4이므로 한 번의 실행으로 4장의 이미지가 동시 생성됩니다." },
+            { id: 23, type: "choice", q: "챗GPT에서 미드저니 프롬프트를 생성해주는 대표적 확장프로그램 명칭은?", options: ["ArxivGPT", "DeepL 번역", "프롬프트지니", "AIPRM"], ans: 4, exp: "프롬프트 템플릿 및 커뮤니티 프롬프트 관리에 널리 쓰이는 도구는 AIPRM입니다." },
+            { id: 24, type: "choice", q: "스테이블 디퓨전 파라미터 ㉠(반복 횟수 지정)과 ㉡(그리는 방법/알고리즘 지정)의 올바른 조합은?", options: ["샘플링 스텝 / 샘플링 메소드", "샘플링 메소드 / 샘플링 스텝", "샘플링 메소드 / 프롬프트", "프롬프트 / 네거티브 프롬프트"], ans: 1, exp: "반복 횟수는 Sampling steps, 알고리즘 지정은 Sampling method입니다." },
+            { id: 25, type: "choice", q: "AIPRM 확장프로그램에서 시적인(Poetic) 분위기의 응답을 생성하기 위해 설정하는 Writing Style은?", options: ["Default", "Emotional", "Dynamic", "Poetic"], ans: 4, exp: "시적인 문체 스타일 옵션은 Poetic입니다." },
+            { id: 26, type: "choice", q: "프롬프트 하이퍼파라미터 중 스타일과 톤을 지정하는 조합으로 옳은 것은?", options: ["writing style, tone", "writing style, max_length", "tone, max_length", "temperature, top_p"], ans: 3, exp: "톤앤매너와 문체 지정을 위한 파라미터 조합입니다." },
+            { id: 27, type: "choice", q: "화성 탐사 및 우주 농사 텍스트 요약 요청 시 요구사항으로 적절하지 않은 것은?", options: ["한글로 요약", "핵심내용 7개 구분 및 첫글자 대문자", "표로 중요 부분 Bold 작성", "핵심 키워드 하이라이트"], ans: 2, exp: "텍스트 요약 요구사항 중 첫글자 대문자 강제 조건 등은 포함되지 않았습니다." },
+            { id: 28, type: "choice", q: "미드저니 생성 이미지에서 특정 이미지와 유사한 시드(Seed) 기반 생성을 위해 프롬프트에 추가하는 파라미터는?", options: ["ar", "chaos", "seed", "quality"], ans: 3, exp: "시드 번호를 지정하여 유사성을 유지하는 파라미터는 seed입니다." },
+            { id: 29, type: "choice", q: "챗GPT에 단축 메뉴 명령(#오늘뭐먹지 등)을 학습시키기 위한 프롬프트 구문으로 옳은 것은?", options: ["#맛집검색 : 주제에 대한 음식 5개", "#한식소개", "#오늘뭐먹지 : 주제에 대한 음식 5개 작성하기", "#음식프롬프트"], ans: 3, exp: "단축어 규칙 정의에 맞는 구문 형태입니다." },
+            { id: 30, type: "choice", q: "생성 AI 학습 단계에서 발생할 수 있는 저작권 이슈가 아닌 것은?", options: ["소유자의 저작권 이슈", "사용 및 배포 동의", "학습 데이터 트렌드 분석", "저작물의 무단 복제"], ans: 3, exp: "트렌드 분석 자체는 저작권 침해 이슈가 아닌 시장 분석 행위입니다." },
+            { id: 31, type: "choice", q: "다음 중 인공지능 학습 데이터 저작권 이슈와 거리가 먼 것은?", options: ["데이터 소유자 저작권 이슈", "미동의 모델 사용", "신경망 학습 시 저작권 데이터 사용", "공공데이터 포털 등록 데이터 사용"], ans: 4, exp: "공공데이터 포털에 개방된 공공 데이터 활용은 저작권 분쟁 이슈와 거리가 멉니다." },
+            { id: 32, type: "choice", q: "생성 AI 저작권 설명으로 옳은 것은?", options: ["항상 저작권 보호를 받지 못함", "무조건 개발자 소유", "원본과 유사할 경우 원본 저작권을 침해할 수 있음", "공개 도메인으로 간주"], ans: 3, exp: "학습한 원본 저작물과 지나치게 유사한 결과물 생성 시 저작권 침해 소지가 발생합니다." },
+            { id: 33, type: "choice", q: "실제 데이터를 모방하여 생성 인공지능 기술 및 시뮬레이션으로 만든 데이터를 뜻하는 용어는?", options: ["합성 데이터(Synthetic Data)", "결합 데이터", "시뮬레이션 데이터", "가짜 데이터"], ans: 1, exp: "실제 데이터를 기반으로 통계적 특성을 본떠 만든 가상의 고품질 데이터를 합성 데이터라 합니다." },
+            { id: 34, type: "choice", q: "AI 학습용 데이터 확보 방안으로 적절하지 않은 것은?", options: ["퍼블릭 도메인 사용", "블로그 및 SNS 공개 저작물 무단 대량 수집 및 상업적 학습", "NIA AI 허브 사용", "저작권자 이용 허락 계약"], ans: 2, exp: "블로그나 SNS의 개인 저작물을 허가 없이 무단 수집·학습하는 것은 저작권 및 퍼블리시티권 침해 소지가 큽니다." },
+            { id: 35, type: "text", q: "[주관식] 거대 언어 모델로부터 원하는 결과를 얻기 위해 프롬프트를 설계하고 개발하는 사람/직업의 명칭을 쓰시오.", ans: ["프롬프트 엔지니어", "Prompt Engineer"], exp: "프롬프트를 설계하고 최적화하는 직업은 프롬프트 엔지니어입니다." },
+            { id: 36, type: "text", q: "[36~40 복합] [제시문 A] @Gmail 제품(①)와(과) 관련된 (②)을/를 찾아줘 -> ①에 들어갈 단어는?", ans: ["광고"], exp: "구글 서비스 연동 및 제품 관련 키워드는 광고입니다." },
+            { id: 37, type: "text", q: "[36~40 복합] [제시문 A] @Gmail 제품(광고)와 관련된 (②)을/를 찾아줘 -> ②에 들어갈 단어는?", ans: ["이메일"], exp: "지메일(Gmail) 연동 대상은 이메일입니다." },
+            { id: 38, type: "text", q: "[36~40 복합] [제시문 B] TV와 관련된 블로그 (③)용 게시글 -> ③에 들어갈 단어는?", ans: ["홍보"], exp: "블로그 게시글의 목적은 홍보용입니다." },
+            { id: 39, type: "text", q: "[36~40 복합] [제시문 B] 게시글을 (④)자 내외로 작성해줘 -> ④에 들어갈 숫자는?", ans: ["300"], exp: "본문 생성 조건에 명시된 글자 수는 300자 내외입니다." },
+            { id: 40, type: "text", q: "[36~40 복합] [제시문 C] 게시글을 핵심적으로 요약하는 (⑤)를(을) 나열해줘 -> ⑤에 들어갈 단어는?", ans: ["해시태그"], exp: "키워드 요약 목록은 해시태그 형태(#QLED 등)로 출력되었습니다." }
+        ];
+
+        let currentIdx = 0;
+        let userAnswers = new Array(examQuestions.length).fill(null);
+        let timeLeft = 3600;
+        let timerInterval = null;
+
+        window.onload = function() {
+            renderOMR();
+            showQuestion(0);
+            startTimer();
+        };
+
+        function startTimer() {
+            timerInterval = setInterval(() => {
+                if (timeLeft <= 0) {
+                    clearInterval(timerInterval);
+                    alert("시험 시간이 종료되었습니다. 자동으로 제출됩니다.");
+                    submitExam();
+                    return;
+                }
+                timeLeft--;
+                const min = Math.floor(timeLeft / 60);
+                const sec = timeLeft % 60;
+                document.getElementById('timer').innerText = `${String(min).padStart(2, '0')}:${String(sec).padStart(2, '0')}`;
+            }, 1000);
+        }
+
+        function showQuestion(idx) {
+            currentIdx = idx;
+            const q = examQuestions[idx];
+            const container = document.getElementById('question-container');
+            
+            let html = `
+                <div class="question-header">
+                    <span class="q-badge">문제 ${q.id}</span>
+                    <span class="q-type">${q.type === 'choice' ? '객관식 (4지선다)' : '주관식 단답형'}</span>
+                </div>
+                <h3 class="q-text">${q.q}</h3>
+            `;
+
+            if (q.type === 'choice') {
+                html += `<div class="options-list">`;
+                q.options.forEach((opt, oIdx) => {
+                    const isSelected = userAnswers[idx] === (oIdx + 1);
+                    html += `
+                        <div onclick="selectAnswer(${idx}, ${oIdx + 1})" class="option-item ${isSelected ? 'selected' : ''}">
+                            <div class="option-num">${oIdx + 1}</div>
+                            <span style="font-size: 14px; color: #2D2A26;">${opt}</span>
+                        </div>
+                    `;
+                });
+                html += `</div>`;
+            } else {
+                const val = userAnswers[idx] || '';
+                html += `
+                    <div>
+                        <input type="text" value="${val}" oninput="selectAnswer(${idx}, this.value)" placeholder="정답을 입력하세요" class="text-input">
+                    </div>
+                `;
+            }
+
+            container.innerHTML = html;
+            document.getElementById('question-progress').innerText = `문항 ${idx + 1} / ${examQuestions.length}`;
+            updateOMRUI();
+        }
+
+        function selectAnswer(qIdx, val) {
+            userAnswers[qIdx] = val;
+            updateOMRUI();
+            if (examQuestions[qIdx].type === 'choice') {
+                showQuestion(qIdx);
+            }
+        }
+
+        function navigateQuestion(step) {
+            const newIdx = currentIdx + step;
+            if (newIdx >= 0 && newIdx < examQuestions.length) {
+                showQuestion(newIdx);
+            }
+        }
+
+        function renderOMR() {
+            const omrGrid = document.getElementById('omr-grid');
+            let html = '';
+            examQuestions.forEach((q, idx) => {
+                html += `
+                    <div id="omr-item-${idx}" onclick="showQuestion(${idx})" class="omr-item ${idx === currentIdx ? 'active' : ''}">
+                        <span class="omr-item-num">Q${q.id}</span>
+                        <span id="omr-val-${idx}" class="omr-item-val">미입력</span>
+                    </div>
+                `;
+            });
+            omrGrid.innerHTML = html;
+        }
+
+        function updateOMRUI() {
+            let answered = 0;
+            userAnswers.forEach((ans, idx) => {
+                const item = document.getElementById(`omr-item-${idx}`);
+                const valSpan = document.getElementById(`omr-val-${idx}`);
+                
+                if (item) {
+                    if (idx === currentIdx) {
+                        item.classList.add('active');
+                    } else {
+                        item.classList.remove('active');
+                    }
+                }
+
+                if (ans !== null && ans !== '') {
+                    answered++;
+                    if (valSpan) {
+                        valSpan.innerText = ans;
+                        valSpan.className = "omr-item-val filled";
+                    }
+                } else {
+                    if (valSpan) {
+                        valSpan.innerText = "미입력";
+                        valSpan.className = "omr-item-val";
+                    }
+                }
+            });
+            document.getElementById('answered-count').innerText = answered;
+        }
+
+        function submitExam() {
+            if (!confirm("시험을 제출하고 채점 결과를 확인하시겠습니까?")) return;
+
+            clearInterval(timerInterval);
+            let correct = 0;
+
+            examQuestions.forEach((q, idx) => {
+                const uAns = userAnswers[idx];
+                if (q.type === 'choice') {
+                    if (parseInt(uAns) === q.ans) correct++;
+                } else {
+                    if (uAns && q.ans.some(a => a.toLowerCase().trim() === String(uAns).toLowerCase().trim())) {
+                        correct++;
+                    }
+                }
+            });
+
+            const score = Math.round((correct / examQuestions.length) * 100);
+            const isPass = score >= 70;
+
+            document.getElementById('score-text').innerText = `${score}점`;
+            document.getElementById('correct-count').innerText = `${correct}개`;
+            document.getElementById('wrong-count').innerText = `${examQuestions.length - correct}개`;
+
+            const badge = document.getElementById('pass-badge');
+            if (isPass) {
+                badge.innerText = "합격 (PASS)";
+                badge.style.backgroundColor = "#ECFDF5";
+                badge.style.color = "#059669";
+                badge.style.border = "1px solid #A7F3D0";
+            } else {
+                badge.innerText = "불합격 (FAIL)";
+                badge.style.backgroundColor = "#FEF2F2";
+                badge.style.color = "#DC2626";
+                badge.style.border = "1px solid #FECACA";
+            }
+
+            document.getElementById('result-modal').classList.remove('hidden');
+        }
+
+        function reviewModalClose() {
+            document.getElementById('result-modal').classList.add('hidden');
+            
+            const container = document.getElementById('question-container');
+            let html = `<div style="display: flex; flex-direction: column; gap: 16px;"><h2 style="font-size: 18px; font-weight: 700; border-bottom: 1px solid #EFECE6; padding-bottom: 12px;">전체 문항 해설 및 오답노트</h2>`;
+
+            examQuestions.forEach((q, idx) => {
+                const uAns = userAnswers[idx];
+                let isCorrect = false;
+                if (q.type === 'choice') {
+                    isCorrect = parseInt(uAns) === q.ans;
+                } else {
+                    isCorrect = uAns && q.ans.some(a => a.toLowerCase().trim() === String(uAns).toLowerCase().trim());
+                }
+
+                html += `
+                    <div style="padding: 16px; border-radius: 14px; border: 1px solid ${isCorrect ? '#A7F3D0' : '#FECACA'}; background-color: ${isCorrect ? '#ECFDF580' : '#FEF2F280'}; display: flex; flex-direction: column; gap: 8px; font-size: 14px;">
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <span style="font-weight: 700; color: #2D2A26;">Q${q.id}. ${q.q.split('\n')[0]}</span>
+                            <span style="font-weight: 700; font-size: 11px; padding: 2px 8px; border-radius: 6px; background: ${isCorrect ? '#059669' : '#DC2626'}; color: #fff;">${isCorrect ? '정답' : '오답'}</span>
+                        </div>
+                        <div style="font-size: 12px; color: #7A7369;">
+                            <p>선택 답안: <span style="font-weight: 600; color: #2D2A26;">${uAns || '미입력'}</span></p>
+                            <p>정답: <span style="font-weight: 700; color: #EA580C;">${q.type === 'choice' ? q.ans : q.ans.join(' / ')}</span></p>
+                        </div>
+                        <div style="background: #ffffff; padding: 10px; border-radius: 8px; border: 1px solid #EFECE6; font-size: 12px; color: #57534E; line-height: 1.5;">
+                            <span style="font-weight: 700; color: #EA580C; display: block; margin-bottom: 2px;">해설:</span>
+                            ${q.exp}
+                        </div>
+                    </div>
+                `;
+            });
+
+            html += `</div>`;
+            container.innerHTML = html;
+        }
+    </script>
+</body>
+</html>
